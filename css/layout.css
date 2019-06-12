@@ -1,0 +1,202 @@
+/*레이어들*/
+
+
+
+.layer {
+    display: table;
+    width: 100%;
+    height: 100%
+}
+
+.layer .layer-container {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+        }
+
+.layer .layer-area {
+    width: 85%;
+/*    height: 85%;*/
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content::after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.index + .content {
+    margin-top: 50px;
+}
+
+
+    .layer .content{
+        position: relative;
+        width: 100%;
+/*        height: 100%;*/
+    }
+        
+       
+        
+        
+        
+        /*    메인 자동재생 동영상*/
+	#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		/* background-image: ; */
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+	}
+        
+        
+        /* Layer with position absolute in order to have it over the video
+	* --------------------------------------- */
+	#section0 .layer0{
+		text-align: center;
+		position: fixed;
+		z-index: 3;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0%;
+		/*
+		* Preventing flicker on some browsers
+		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+		*/
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+
+	/*solves problem with overflowing video in Mac with Chrome */
+	#section0, #section1, #section3, #section4, #section5, #section6, #section7, #section8{
+		overflow: hidden;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+
+	/* Hiding video controls
+	* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+	* --------------------------------------- */
+	video#myVideo::-webkit-media-controls {
+	  display:none !important;
+	}
+    
+    /*sec0 css*/
+    img#go-down {
+        width: 12%;
+        text-align: center;
+        -webkit-animation:blink 1s ease-in-out infinite alternate;
+        -moz-animation:blink 1s ease-in-out infinite alternate;
+        animation:blink 1s ease-in-out infinite alternate;
+    }
+        .bottom-menu table{
+/*            margin-top: 200px;*/
+            width: 100%;
+            position: relative;
+            top: 260px;
+        }
+        .bottom-menu td{
+            width: 33.3333%;
+            text-align: center;
+        }
+
+
+/*레이어1*/
+
+.layer1-column{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.layer-up{
+    position: relative;
+}
+.layer-down{
+    position: relative;
+    width: 50%;
+}
+.layer-down h2{
+    font-size: 30px;
+	margin-bottom: 30px
+}
+.layer-down p{
+    font-size: 17px;
+    text-align: justify;
+    line-height: 1.6;
+    font-weight: 400;
+}
+        
+        
+        .swiper-container {
+            width: 60vw;
+            height: 40vh;
+            margin: 150px auto;
+            padding-top: 50px;
+            padding-bottom: 100px;
+
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+
+        .swiper-slide a {
+            font-size: 30px;
+            font-weight: 600;
+            position: relative;
+            top: 105%;
+            text-align: center;
+            display: block;
+            color: black;
+/*            background-color: violet;*/
+            text-decoration: none;
+        }
+        
+        td#album{visibility: hidden;}
+
+
+
+/*레이어마지막*/
+
+*{margin:0;padding:0}
+    body{font-family:'Roboto', sans-serif}
+    a{text-decoration:none}
+    ul{list-style-type:none}
+    .tab-menu{width:800px;margin:0 auto;margin-top:50px}
+    .tab-menu ul{display:flex}
+    .tab-menu li{flex:1;height:50px}
+    .tab-menu li a{position:relative;display:block;width:100%;height:100%;background-color:#999;text-transform:uppercase;text-align:center;color:#fff;line-height:50px}
+    .tab-menu li a.selected{background-color:#000;cursor:default}
+    .tab-container{width:800px;margin:0 auto;border:1px solid #000;box-sizing:border-box}
+    .tab-container .tab-content{display:none;padding:30px;height:450px;box-sizing:border-box}
+.tab-container .tab-content.selected{display:block}

@@ -10,7 +10,8 @@
     <meta name="Resource-type" content="Document" />
 
     <link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
-    <!--	<link rel="stylesheet" type="text/css" href="./css/examples.css" />-->
+    <link rel="stylesheet" type="text/css" href="./css/layout.css">
+
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="./dist/css/swiper.min.css">
 
@@ -70,159 +71,9 @@
             font-family: 'Noto Sans KR', sans-serif;
             font-family: 'Roboto', sans-serif;
         }
+        a{text-decoration:none}
+    ul{list-style-type:none}
         
-        /*레이어들*/
-
-
-
-.layer {
-    display: table;
-    width: 100%;
-    height: 100%
-}
-
-.layer .layer-container {
-    display: table-cell;
-    position: relative;
-    vertical-align: middle;
-    text-align: left;
-    width: 100%;
-    height: 100%;
-        }
-
-.layer .layer-area {
-    width: 85%;
-    height: 85%;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.content::after {
-    content: "";
-    display: block;
-    clear: both
-}
-
-.index + .content {
-    margin-top: 50px;
-}
-
-
-    .layer .content{
-        position: relative;
-        width: 100%;
-/*        height: 100%;*/
-    }
-        
-       
-        
-        
-        
-        /*    메인 자동재생 다이브인 동영상*/
-	#myVideo{
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		top:0;
-		right:0;
-		width: 100%;
-		height: 100%;
-		background-size: 100% 100%;
- 		background-color: black; /* in case the video doesn't fit the whole page*/
-  		/* background-image: ; */
-  		background-position: center center;
-  		background-size: contain;
-   		object-fit: cover; /*cover video background */
-   		z-index:3;
-	}
-        
-        
-        /* Layer with position absolute in order to have it over the video
-	* --------------------------------------- */
-	#section0 .layer0{
-		text-align: center;
-		position: fixed;
-		z-index: 10;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0%;
-		/*
-		* Preventing flicker on some browsers
-		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
-		*/
-		-webkit-transform: translate3d(0,0,0);
-		-ms-transform: translate3d(0,0,0);
-		transform: translate3d(0,0,0);
-	}
-
-	/*solves problem with overflowing video in Mac with Chrome */
-	#section0, #section1, #section3, #section4, #section5, #section6, #section7, #section8{
-		overflow: hidden;
-	}
-
-
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu li a {
-		color: #fff;
-	}
-
-
-	/* Hiding video controls
-	* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
-	* --------------------------------------- */
-	video#myVideo::-webkit-media-controls {
-	  display:none !important;
-	}
-    
-    /*sec0 css*/
-    img#go-down {
-        width: 12%;
-        text-align: center;
-        -webkit-animation:blink 1s ease-in-out infinite alternate;
-        -moz-animation:blink 1s ease-in-out infinite alternate;
-        animation:blink 1s ease-in-out infinite alternate;
-    }
-        .bottom-menu table{
-/*            margin-top: 200px;*/
-            width: 100%;
-            position: relative;
-            top: 260px;
-        }
-        .bottom-menu td{
-            width: 33.3333%;
-            text-align: center;
-        }
-        
-        
-        .swiper-container {
-            width: 70%;
-            margin: 150px auto;
-            padding-top: 50px;
-            padding-bottom: 100px;
-
-        }
-
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 300px;
-            height: 300px;
-        }
-
-        .swiper-slide a {
-            font-size: 30px;
-            font-weight: 600;
-            position: relative;
-            top: 110%;
-            text-align: center;
-            display: block;
-            color: black;
-            text-decoration: none;
-        }
-        
-        td#album{visibility: hidden;}
     </style>
 </head>
 
@@ -236,7 +87,7 @@
         <div class="section " id="section0" data-anchor="section00">
             <!--                       background video-->
             <video id="myVideo" loop muted data-autoplay>
-                <source src="./source/video/main.mp4" type="video/mp4">
+                <source src="./source/video/main3.mp4" type="video/mp4">
             </video>
 
 
@@ -274,11 +125,18 @@
             <div class="layer layer1">
                 <div class="layer-container">
                     <div id="layer1_content" class="content">
-                        <div class="layer-area">
-                            <div class="header">
-                                <div class="logo">
-                                    <h1>비요크 간단 소개</h1>
+                        <div class="layer-area" style="text-align: center">
+                            <!--                       one column-->
+                            <div class="layer1-column layer-up">
+                                <div id="layer6-content" class="content">
+                                    <!--                               related image-->
+                                    <img src="./source/img/bjork2019.jpg" alt="" width="350px">
                                 </div>
+                            </div>
+                            <div class="layer1-column layer-down">
+                                <!--                            text-->
+                                <h2 class="layer1-title">Bjork</h2>
+                                <p class="layer-text">아이슬란드의 싱어송라이터, 아티스트이다. 어릴 적 그녀의 커버곡 영상이 아이슬란드 유일의 라디오 방송국에 보내져 전국적으로 방송되는 것으로 음악 경력이 시작되었다. 10대에 여러 밴드에서 활동했으며 이후 1986년 중순부터 슈가큐브스라는 밴드에서 활동하며 영국과 미국에서 큰 인기를 얻는다. 슈가큐브스는 3장의 앨범을 끝으로 해체되고 영국에서 본격적으로 솔로 활동을 시작한다.</p>
                             </div>
                         </div>
                     </div>
@@ -288,22 +146,22 @@
 
 
         <div class="section" id="section2">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image:url(./source/img/debut.jpg)">
-                        <a href="./pin_layout00.html">More</a>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url(./source/img/post.jpg)">
-                        <a href="./pin_layout01.html">More</a>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url(./source/img/homogenic.jpg)"><a href="./pin_layout02.html">More</a></div>
-                    <div class="swiper-slide" style="background-image:url(./source/img/vespertine.jpg)"><a href="./pin_layout03.html">More</a></div>
-                    <div class="swiper-slide" style="background-image:url(./source/img/utopia.jpg)"><a href="./pin_layout04.html">More</a></div>
-                </div>
-            </div>
-        </div>
-
-
+            
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background-image:url(./source/img/debut.jpg)">
+                                        <a class="slide-text" href="./pin_layout00.html">More</a>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image:url(./source/img/post.jpg)">
+                                        <a class="slide-text" href="./pin_layout01.html">More</a>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image:url(./source/img/homogenic.jpg)"><a class="slide-text" href="./pin_layout02.html">More</a></div>
+                                    <div class="swiper-slide" style="background-image:url(./source/img/vespertine.jpg)"><a class="slide-text" href="./pin_layout03.html">More</a></div>
+                                    <div class="swiper-slide" style="background-image:url(./source/img/utopia.jpg)"><a class="slide-text" href="./pin_layout04.html">More</a></div>
+                                </div>
+                            </div>
+                        </div>
+                  
 
 
 
@@ -312,11 +170,15 @@
                 <div class="layer-container">
                     <div id="layer3_content" class="content">
                         <div class="layer-area">
-                            <div class="header">
-                                <div class="logo">
-                                    <h1 style="font-size: 50px">반드시 해야할 것 :<br>3페이지 버튼 가운데 이외에 숨기기</h1>
-                                </div>
-
+                            <div id="tab-menu" class="tab-menu">
+                                <ul>
+                                    <li><a href="#" class="selected">Tab 1</a></li>
+                                    <li><a href="#">Tab 2</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-container">
+                                <div class="tab-content selected">Tab 1 Content.</div>
+                                <div class="tab-content">Tab 2 Content.</div>
                             </div>
                         </div>
                     </div>
@@ -325,7 +187,13 @@
         </div>
     </div>
 
-
+    
+    
+    <div class="cursor"></div>
+    
+    <script src="./js/script.js" type="text/javascript"></script>
+   
+   
     <script type="text/javascript" src="./js/fullpage.js"></script>
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
@@ -384,5 +252,53 @@
             //            $a.remove();
         }
     </script>
+
+    <script type="text/javascript">
+        var $tabMenu = document.querySelector("#tab-menu");
+        var $tabMenuEl = document.querySelectorAll('a');
+        // console.log($tabMenu, $tabMenuEl);
+        var $tabContent = document.getElementsByClassName('tab-content');
+        //console.log($tabContent);
+
+        for (var i = 0; i < $tabMenuEl.length; i++) {
+            /*
+            console.log(i);
+            $tabMenuEl[i].addEventListener('click', function(event){
+              event.preventDefault();
+              console.log('click' + i);
+            });
+            */
+            tabMenuClick(i);
+        }
+
+        function tabMenuClick(index) {
+            //i의 순서 체크할 수 있게 인덱스의 전달인자로 활용
+            $tabMenuEl[index].addEventListener('click', function(event) {
+                event.preventDefault();
+                //console.log(index);
+                //해당 순서를 출력
+                for (var i = 0; i < $tabMenuEl.length; i++) {
+                    //모든 요소에서 셀렉티드 삭제
+                    $tabMenuEl[i].classList.remove('selected');
+                    $tabContent[i].classList.remove('selected');
+                    if (i === index) {
+                        //포문 실행 시 자신의 순서와 i 일치하나 본다 같으면 셀렉티드 추가
+                        $tabMenuEl[i].classList.add('selected');
+                        $tabContent[i].classList.add('selected');
+                    }
+                }
+                /*
+                for(var i=0; i<$tapContent.length; i++){
+                  $tabContent[i].classList.remove('selected');
+                  if(i === index){
+                    $tapContent[i].classList.add('selected');
+                  }
+                }
+                */
+            });
+        }
+    </script>
+    
+    
 </body>
 </html>
