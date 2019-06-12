@@ -10,17 +10,19 @@
     <meta name="Resource-type" content="Document" />
 
     <link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
-    <link rel="stylesheet" type="text/css" href="./css/layout.css">
+    
     <link rel="stylesheet" href="./css/style.css"/>
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="./dist/css/swiper.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="./css/layout.css">
 
 
     <style>
         .logo {
             font-family: "bjorkfont";
-            font-size: 60px;
+            font-size: 130px;
             color: white;
             text-align: center;
             -webkit-animation:colorchange 100s infinite alternate;
@@ -28,7 +30,8 @@
             -o-animation: color-change 100s infinite alternate;
             -ms-animation: color-change 100s infinite alternate;
             animation: color-change 100s infinite alternate;
-            margin-bottom: 60px;
+			margin-top: 50px;
+            margin-bottom: 50px;
         }
         
         @-webkit-keyframes colorchange {
@@ -68,10 +71,7 @@
           100% {color: #ff74fa;} 
         }
 
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            font-family: 'Roboto', sans-serif;
-        }
+        
         a{text-decoration:none}
     ul{list-style-type:none}
         
@@ -151,10 +151,10 @@
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" style="background-image:url(./source/img/debut.jpg)">
-                                        <a class="slide-text" href="./pin_layout00.html">More</a>
+                                        <a class="slide-text" href="./bigtimesensuality.html">More</a>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(./source/img/post.jpg)">
-                                        <a class="slide-text" href="./pin_layout01.html">More</a>
+                                        <a class="slide-text" href="./bigtimesensuality.html">More</a>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(./source/img/homogenic.jpg)"><a class="slide-text" href="./pin_layout02.html">More</a></div>
                                     <div class="swiper-slide" style="background-image:url(./source/img/vespertine.jpg)"><a class="slide-text" href="./pin_layout03.html">More</a></div>
@@ -210,15 +210,14 @@
         var swiper = new Swiper('.swiper-container', {
             effect: 'coverflow',
             grabCursor: true,
-
             centeredSlides: true,
             slidesPerView: 3,
             initialSlide: 0,
             coverflowEffect: {
-                rotate: 50,
+                rotate: -15,
                 loop: true,
                 stretch: 0,
-                depth: 100,
+                depth: 350,
                 modifier: 1,
                 slideShadows: true,
             },

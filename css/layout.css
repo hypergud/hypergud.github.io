@@ -116,7 +116,7 @@
 /*            margin-top: 200px;*/
             width: 100%;
             position: relative;
-            top: 260px;
+            top: 300px;
         }
         .bottom-menu td{
             width: 33.3333%;
@@ -155,12 +155,13 @@
         
         
         .swiper-container {
-            width: 60vw;
-            height: 40vh;
+            width: 70vw;
+            height: 50vh;
             margin: 150px auto;
+/*			text-align: center;*/
             padding-top: 50px;
-            padding-bottom: 100px;
-
+/*            padding-bottom: 100px;*/
+			overflow:hidden
         }
 
         .swiper-slide {

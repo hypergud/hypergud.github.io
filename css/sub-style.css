@@ -1,0 +1,117 @@
+/*sub-section00*/
+
+
+.song-title{
+	font-size: 100px;
+	color: #404040;
+	margin: 20px auto;
+}
+.song-sub{
+	font-size: 35px;
+	color: #969696;
+	margin: 20px 10px;
+}
+
+/*sec0 css*/
+    img#go-down {
+        width: 12%;
+        text-align: center;
+        -webkit-animation:blink 1s ease-in-out infinite alternate;
+        -moz-animation:blink 1s ease-in-out infinite alternate;
+        animation:blink 1s ease-in-out infinite alternate;
+    }
+        .bottom-menu table{
+/*            margin-top: 200px;*/
+            width: 100%;
+            position: relative;
+            top: 300px;
+        }
+        .bottom-menu td{
+            width: 33.3333%;
+            text-align: center;
+        }
+
+
+
+/*LP플레이어*/
+.player-container {
+	position: absolute;
+	margin: 0 auto;
+    text-align: center;
+	left: 0;
+	right: 0;
+	margin-top: -100px;
+    margin-left: -200px;
+	margin-top: -90px;
+	margin-left: -400px;
+}
+
+.player-album {
+	position: absolute;
+	z-index: 15;
+	border-radius: 2px;
+	transform: translateX(0);
+	transition: all 0.2s ease-out;
+    
+}
+
+.player-album.active {
+	transform: translateX(-50px);
+	transition: all 0.2s ease-out;
+}
+
+.player-vinyl {
+    width: 190px;
+	position: absolute;
+	z-index: 10;
+	top: 5px;
+	left: 1065px;
+	top: 6px;
+	left: 1165px;
+	transform-origin: center middle;
+	transition: all 0.2s ease-out;
+}
+
+.player-vinyl.active {
+	position: absolute;
+	transform: translateX(50px);
+	transform-origin: center middle;
+	transition: all 0.2s ease-out;
+}
+
+.player-vinyl.playing {
+	position: absolute;
+	transform: translateX(50px);
+	transform-origin: center middle;
+	animation: playing 1.4s infinite linear;
+}
+
+.player-shadow {
+    width: 280px;
+	position: absolute;
+	z-index: 9;
+	top: 145px;
+    margin-left: -40px;
+	transform: translateX(0);
+	transition: all 0.05s ease-out;
+}
+
+.player-vinyl.active ~ .player-shadow {
+	position: absolute;
+	transform: translateX(50px);
+	transition: all 0.2s ease-out;
+}
+
+@keyframes playing {
+	0% {
+		transform: translateX(50px) rotate(0);
+	}
+	100% {
+		transform: translateX(50px) rotate(360deg);
+	}
+}
+
+.layer2 td.text{
+	position: relative;
+	left: 900px;
+}
