@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>sub1</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords" content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="./css/sub-layout.css">
+	<!--    <link rel="stylesheet" href="./css/style.css"/>-->
+	<link rel="stylesheet" href="./css/sub-style.css">
+
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="./dist/css/swiper.min.css">
+
+
+	<style>
+
+	</style>
+</head>
+
+<body>
+
+
+	<div id="fullpage">
+
+		<!--       section 0 : Main-->
+
+		<div class="section " id="section0" data-anchor="section00">
+			<div class="layer layer0">
+				<div class="layer-container">
+					<div id="layer0_content" class="content">
+						<div class="layer-area">
+							<div class="header">
+								<div class="title">
+									<h1 class="song-title">The Gate</h1>
+									<h2 class="song-sub">Directed by Andrew Thomas Huang</h2>
+								</div>
+								<div class="bottom-menu">
+									<table>
+										<tr>
+											<td>&nbsp;</td>
+											<td><img id="go-down" src="./source/img/arrow2-bottom.png" alt=""></td>
+											<td>&nbsp;</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+		<!--        section 1-->
+		<div class="section" id="section1" data-anchor="section01">
+			<!--                       background video-->
+			<video id="myVideo" controls>
+				<source src="./source/video/tg.mp4" type="video/mp4">
+			</video>
+
+		</div>
+
+
+		<div class="section" id="section2">
+			<div class="layer layer2">
+				<div class="layer-container">
+					<div id="layer2_content" class="content">
+						<div class="layer-area">
+							<table>
+								<tr>
+									<td colspan="1">
+										<div class="player-container" onclick="play()">
+										<audio id="audio_play" src="./source/music/tg.mp3"></audio>
+											<img class="player-item player-album" src="./source/img/utopia.jpg" alt="album-cover" width="205px" />
+											<img class="player-item player-vinyl" src="http://katehummer.com/resources/vinyl-player/vinyl-alt.png" alt="vinyl" />
+											<img class="player-item player-shadow" src="http://katehummer.com/resources/vinyl-player/vinyl-shadow.png" alt="vinyl-shadow" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="text">
+										<h3>Utopia</h3>
+										<h4>Bjork, 1995</h4>
+										<ol>
+											<li>Army of Me &nbsp;(3:54)</li>
+											<li>Hyperballad &nbsp;(5:22)</li>
+											<li>It's Oh So Quiet &nbsp;(3:39)</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+		<div class="section" id="section3">
+			<div class="layer layer3">
+				<div class="layer-container">
+					<div id="layer3_content" class="content">
+						<div class="layer-area">
+<h1>이미지 갤러리 레이아웃 고민 필요 !</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="cursor-dot">&nbsp;</div>
+	<script src="./vendor/gsap/TweenMax.min.js" type="text/javascript"></script>
+	<script src="./js/script.js" type="text/javascript"></script>
+
+
+	<script type="text/javascript" src="./js/fullpage.js"></script>
+	<script type="text/javascript">
+		var myFullpage = new fullpage('#fullpage', {
+			sectionsColor: ['#ffffff']
+		});
+	</script>
+
+
+	<script>
+		var $playeralbum = document.querySelector(".player-album");
+		var $playervinyl = document.querySelector(".player-vinyl");
+
+		$playeralbum.addEventListener('click', function(event) {
+			event.preventDefault();
+			if ($playervinyl.classList.contains("active") == false) {
+				$playeralbum.classList.add("active");
+				$playervinyl.classList.add("active");
+				setTimeout(function() {
+					$playervinyl.classList.add("playing");
+				}, 180);
+
+			} else if ($playervinyl.classList.contains("active") == true) {
+				$playeralbum.classList.remove("active");
+				$playervinyl.classList.remove("active");
+				$playervinyl.classList.remove("playing");
+			}
+		})
+
+
+
+
+
+		var $flipContainer = document.querySelector('.flipster');
+		var $flipItemContainer = document.querySelector('.flip-items');
+		var $flipItem = document.querySelector('li');
+
+		var f = $flipContainer.flipster({
+			itemContainer: $flipItemContainer,
+			itemSelector: $flipItem,
+			loop: true,
+			style: 'carousel',
+			spacing: -0.5,
+			scrollwheel: false,
+			//nav: 'after',
+			buttons: false
+		});
+	</script>
+	
+	<script type="text/javascript"> 
+function play() { 
+    var audio = document.getElementById("audio_play"); 
+    if (audio.paused) { 
+        audio.play(); 
+    }else{ 
+        audio.pause(); 
+        audio.currentTime = 0 
+    } 
+} 
+</script>
+
+
+</body>
+</html>

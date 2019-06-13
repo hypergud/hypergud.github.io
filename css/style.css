@@ -48,4 +48,37 @@ table {
 
 #cursor-dot{overflow:hidden;position:fixed;top:50%;left:50%;box-sizing:border-box;transform:translateX(-50%) translateY(-50%);pointer-events:none}
 /* 포인터 이벤트 논  */
-#cursor-dot{z-index:600;width:9px;height:9px;border-radius:50%;background-color:#000000}
+#cursor-dot{z-index:600;width:9px;height:9px;border-radius:50%;background-color:#ff3399;
+	-webkit-animation: color-change 100s infinite alternate;
+            -moz-animation: color-change 100s infinite alternate;
+            -o-animation: color-change 100s infinite alternate;
+            animation: color-change 100s infinite alternate;}
+@-webkit-keyframes color-change {
+          0% {background-color: #333333;}
+          25% {background-color: #e32e89;}
+          50% {background-color: #2980b9;}
+          75% {background-color: #93b0bc;}
+          100% {background-color: #ff74fa;} 
+        }
+        
+        @-moz-keyframes color-change {
+          0% {background-color: #333333;}
+          25% {background-color: #e32e89;}
+          50% {background-color: #2980b9;}
+          75% {background-color: #93b0bc;}
+          100% {background-color: #ff74fa;} 
+        }
+        @-o-keyframes color-change {
+          0% {background-color: #333333;}
+          25% {background-color: #e32e89;}
+          50% {background-color: #2980b9;}
+          75% {background-color: #93b0bc;}
+          100% {background-color: #ff74fa;} 
+        }
+        @keyframes color-change {
+          0% {background-color: #333333;}
+          25% {background-color: #e32e89;}
+          50% {background-color: #2980b9;}
+          75% {background-color: #93b0bc;}
+          100% {background-color: #ff74fa;}  
+        }

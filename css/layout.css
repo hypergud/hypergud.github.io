@@ -135,22 +135,36 @@
     margin-bottom: 30px;
 }
 
-.layer-up{
-    position: relative;
+.layer1-left{
+	position: relative;
+	width: 45%;
+	height:70vh;
+    float: left;
+	background-color: rgba(238, 130, 238, 0.26);
+	padding: 2%;
 }
-.layer-down{
-    position: relative;
-    width: 50%;
+.layer1-left h1{
+	font-size: 30px;
+	font-weight: 500;
+	position: relative;
+	top: 45%;
 }
-.layer-down h2{
-    font-size: 30px;
-	margin-bottom: 30px
+.layer1-right{
+	position: relative;
+	width: 45%;
+	height:70vh;
+    float: left;
+	background-color: rgba(0, 0, 255, 0.15);
+	padding: 2%;
 }
-.layer-down p{
-    font-size: 17px;
-    text-align: justify;
-    line-height: 1.6;
-    font-weight: 400;
+.layer1-right h1{
+	font-size: 30px;
+	font-weight: 500;
+	position: relative;
+	top: 45%;
+}
+.clear{
+	clear: both;
 }
         
         

@@ -24,3 +24,7 @@ function onMouseMoveWindow(e){
 
     TweenMax.to($cursorDot, 0, {css:{top:posY, left:posX}});
 }
+
+
+
+//세번째 섹션 링크 숨기기
