@@ -19,8 +19,23 @@
 
 
 	<style>
-
-	</style>
+		.embed-container {
+ position: relative; 
+padding-bottom: 56.25%; 
+			
+height: 0; 
+overflow: hidden; 
+max-width: 100%; } 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+position: absolute; 
+top: 8.5vh;
+left: 12.5vw;
+/*
+width:100%; 
+height:100%; 
+*/
+		}
+</style>
 </head>
 
 <body>
@@ -39,6 +54,15 @@
 								<div class="title">
 									<h1 class="song-title">The Gate</h1>
 									<h2 class="song-sub">Directed by Andrew Thomas Huang</h2>
+									<h4>
+										Released	15 September 2017
+Format	Digital download12"<br>
+Genre	Ambientelectronica<br>
+Length	3:56 (radio edit) 6:33 (album version)<br>
+Label	One Little Indian<br>
+Songwriter(s)	BjörkArca<br>
+Producer(s)	BjörkArca<br>
+									</h4>
 								</div>
 								<div class="bottom-menu">
 									<table>
@@ -62,9 +86,10 @@
 		<!--        section 1-->
 		<div class="section" id="section1" data-anchor="section01">
 			<!--                       background video-->
-			<video id="myVideo" controls>
-				<source src="./source/video/tg.mp4" type="video/mp4">
-			</video>
+			<div class="embed-container">
+				<iframe width="75%" height="75%" src="https://www.youtube.com/embed/RIGgn1s3AvI" frameborder="0" allowfullscreen>
+				</iframe></div>
+
 
 		</div>
 

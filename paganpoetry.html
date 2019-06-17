@@ -17,10 +17,24 @@
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="./dist/css/swiper.min.css">
 
-
-	<style>
-
-	</style>
+<style>
+		.embed-container {
+ position: relative; 
+padding-bottom: 56.25%; 
+			
+height: 0; 
+overflow: hidden; 
+max-width: 100%; } 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+position: absolute; 
+top: 8.5vh;
+left: 12.5vw;
+/*
+width:100%; 
+height:100%; 
+*/
+		}
+</style>
 </head>
 
 <body>
@@ -39,6 +53,14 @@
 								<div class="title">
 									<h1 class="song-title">Pagan Poetry</h1>
 									<h2 class="song-sub">Directed by Nick Knight</h2>
+									<h4>
+										Released	5 November 2001 <br>
+Format	CD DVD<br>
+Length	5:17 (album version) 4:01 (radio edit)<br>
+Label	One Little Indian<br>
+Songwriter(s)	Björk<br>
+Producer(s)	Björk Marius de Vries<br>
+									</h4>
 								</div>
 								<div class="bottom-menu">
 									<table>
@@ -62,9 +84,9 @@
 		<!--        section 1-->
 		<div class="section" id="section1" data-anchor="section01">
 			<!--                       background video-->
-			<video id="myVideo" controls>
-				<source src="./source/video/pp_1080.mp4" type="video/mp4">
-			</video>
+			<div class="embed-container">
+				<iframe width="75%" height="75%" src="https://www.youtube.com/embed/Ol_0srrhkKA" frameborder="0" allowfullscreen>
+				</iframe></div>
 
 		</div>
 

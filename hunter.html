@@ -19,8 +19,23 @@
 
 
 	<style>
-
-	</style>
+		.embed-container {
+ position: relative; 
+padding-bottom: 56.25%; 
+			
+height: 0; 
+overflow: hidden; 
+max-width: 100%; } 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+position: absolute; 
+top: 8.5vh;
+left: 12.5vw;
+/*
+width:100%; 
+height:100%; 
+*/
+		}
+</style>
 </head>
 
 <body>
@@ -39,6 +54,16 @@
 								<div class="title">
 									<h1 class="song-title">Hunter</h1>
 									<h2 class="song-sub">Directed by Paul White</h2>
+									<h4>
+										Released	5 October 1998
+Format	 CD VHS box set <br>
+Recorded	1997 at El Cortijo Studios(Málaga, Spain) <br>
+Genre	Electronica baroque pop folktronica drum and bass <br>
+Length	4:12 (album version) 3:29 (radio edit) <br>
+Label	One Little Indian <br>
+Songwriter(s)	Björk <br>
+Producer(s)	Björk Mark Bell <br>
+									</h4>
 								</div>
 								<div class="bottom-menu">
 									<table>
@@ -62,9 +87,9 @@
 		<!--        section 1-->
 		<div class="section" id="section1" data-anchor="section01">
 			<!--                       background video-->
-			<video id="myVideo" controls>
-				<source src="./source/video/h_1080.mp4" type="video/mp4">
-			</video>
+			<div class="embed-container">
+				<iframe width="75%" height="75%" src="https://www.youtube.com/embed/CyM5wow-hUk" frameborder="0" allowfullscreen>
+				</iframe></div>
 
 		</div>
 

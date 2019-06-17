@@ -17,10 +17,24 @@
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="./dist/css/swiper.min.css">
 
-
-	<style>
-
-	</style>
+<style>
+		.embed-container {
+ position: relative; 
+padding-bottom: 56.25%; 
+			
+height: 0; 
+overflow: hidden; 
+max-width: 100%; } 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+position: absolute; 
+top: 8.5vh;
+left: 12.5vw;
+/*
+width:100%; 
+height:100%; 
+*/
+		}
+</style>
 </head>
 
 <body>
@@ -39,6 +53,16 @@
 								<div class="title">
 									<h1 class="song-title">Hyperballad</h1>
 									<h2 class="song-sub">Directed by Michel Gondry</h2>
+									<h4>
+										Released February 12, 1996 <br>
+										Format CD 12" cassette<br>
+										Studio Compass Point Studios(Nassau, Bahamas)<br>
+										Genre Folktronica acid house<br>
+										Length 5:21 (album version) 3:58 (radio/video edit)<br>
+										Label One Little Indian<br>
+										Songwriter(s) Björk<br>
+										Producer(s) Björk Nellee Hooper<br>
+									</h4>
 								</div>
 								<div class="bottom-menu">
 									<table>
@@ -62,9 +86,9 @@
 		<!--        section 1-->
 		<div class="section" id="section1" data-anchor="section01">
 			<!--                       background video-->
-			<video id="myVideo" controls>
-				<source src="./source/video/hp_1080.mp4" type="video/mp4">
-			</video>
+			<div class="embed-container">
+				<iframe width="75%" height="75%" src="https://www.youtube.com/embed/EnZzE89Qn7w" frameborder="0" allowfullscreen>
+				</iframe></div>
 
 		</div>
 
@@ -78,7 +102,7 @@
 								<tr>
 									<td colspan="1">
 										<div class="player-container" onclick="play()">
-										<audio id="audio_play" src="./source/music/hpb.mp3"></audio>
+											<audio id="audio_play" src="./source/music/hpb.mp3"></audio>
 											<img class="player-item player-album" src="./source/img/post.jpg" alt="album-cover" width="205px" />
 											<img class="player-item player-vinyl" src="http://katehummer.com/resources/vinyl-player/vinyl-alt.png" alt="vinyl" />
 											<img class="player-item player-shadow" src="http://katehummer.com/resources/vinyl-player/vinyl-shadow.png" alt="vinyl-shadow" />
@@ -112,7 +136,7 @@
 				<div class="layer-container">
 					<div id="layer3_content" class="content">
 						<div class="layer-area">
-<h1>이미지 갤러리 레이아웃 고민 필요 !</h1>
+							<h1>이미지 갤러리 레이아웃 고민 필요 !</h1>
 						</div>
 					</div>
 				</div>
@@ -174,18 +198,18 @@
 			buttons: false
 		});
 	</script>
-	
-	<script type="text/javascript"> 
-function play() { 
-    var audio = document.getElementById("audio_play"); 
-    if (audio.paused) { 
-        audio.play(); 
-    }else{ 
-        audio.pause(); 
-        audio.currentTime = 0 
-    } 
-} 
-</script>
+
+	<script type="text/javascript">
+		function play() {
+			var audio = document.getElementById("audio_play");
+			if (audio.paused) {
+				audio.play();
+			} else {
+				audio.pause();
+				audio.currentTime = 0
+			}
+		}
+	</script>
 
 
 </body>

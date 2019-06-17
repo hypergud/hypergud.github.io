@@ -17,10 +17,25 @@
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="./dist/css/swiper.min.css">
 
-
 	<style>
+		.embed-container {
+ position: relative; 
+padding-bottom: 56.25%; 
+			
+height: 0; 
+overflow: hidden; 
+max-width: 100%; } 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+position: absolute; 
+top: 8.5vh;
+left: 12.5vw;
+/*
+width:100%; 
+height:100%; 
+*/
+		}
+</style>
 
-	</style>
 </head>
 
 <body>
@@ -64,9 +79,14 @@
 		<!--        section 1-->
 		<div class="section" id="section1" data-anchor="section01">
 			<!--                       background video-->
+			<!--
 			<video id="myVideo" controls>
 				<source src="./source/video/bts_1280.mp4" type="video/mp4">
 			</video>
+-->
+			<div class="embed-container">
+				<iframe width="75%" height="75%" src="https://www.youtube.com/embed/wHuXpWSNa-8" frameborder="0" allowfullscreen>
+				</iframe></div>
 
 		</div>
 
@@ -80,7 +100,7 @@
 								<tr>
 									<td colspan="1">
 										<div class="player-container" onclick="play()">
-										<audio id="audio_play" src="./source/music/bts.mp3"></audio>
+											<audio id="audio_play" src="./source/music/Debut.mp3"></audio>
 											<img class="player-item player-album" src="./source/img/debut.jpg" alt="album-cover" width="200px" />
 											<img class="player-item player-vinyl" src="http://katehummer.com/resources/vinyl-player/vinyl-alt.png" alt="vinyl" />
 											<img class="player-item player-shadow" src="http://katehummer.com/resources/vinyl-player/vinyl-shadow.png" alt="vinyl-shadow" />
@@ -114,7 +134,7 @@
 				<div class="layer-container">
 					<div id="layer3_content" class="content">
 						<div class="layer-area">
-<h1>이미지 갤러리 레이아웃 고민 필요 !</h1>
+							<h1>이미지 갤러리 레이아웃 고민 필요 !</h1>
 						</div>
 					</div>
 				</div>
@@ -132,7 +152,7 @@
 	<script type="text/javascript" src="./js/fullpage.js"></script>
 	<script type="text/javascript">
 		var myFullpage = new fullpage('#fullpage', {
-			sectionsColor: ['#ffffff']
+			sectionsColor: ['#ffffff', '#111', '#ffffff','#ffffff']
 		});
 	</script>
 
@@ -176,18 +196,18 @@
 			buttons: false
 		});
 	</script>
-	
-	<script type="text/javascript"> 
-function play() { 
-    var audio = document.getElementById("audio_play"); 
-    if (audio.paused) { 
-        audio.play(); 
-    }else{ 
-        audio.pause(); 
-        audio.currentTime = 0 
-    } 
-} 
-</script>
+
+	<script type="text/javascript">
+		function play() {
+			var audio = document.getElementById("audio_play");
+			if (audio.paused) {
+				audio.play();
+			} else {
+				audio.pause();
+				audio.currentTime = 0
+			}
+		}
+	</script>
 
 
 </body>

@@ -2,24 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>index</title>
-    <meta name="author" content="Alvaro Trigo Lopez" />
-    <meta name="description" content="fullPage very simple demo." />
-    <meta name="keywords" content="fullpage,jquery,demo,simple" />
-    <meta name="Resource-type" content="Document" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>index</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords" content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
 
-    <link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
-    
-    <link rel="stylesheet" href="./css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
 
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="./dist/css/swiper.min.css">
-    
-    <link rel="stylesheet" type="text/css" href="./css/layout.css">
+	<link rel="stylesheet" href="./css/style.css" />
+
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="./dist/css/swiper.min.css">
+
+	<link rel="stylesheet" type="text/css" href="./css/layout.css">
 
 
-    <style>
+	<style>
 		body{
 			cursor: none;
 /*			따라오는 친구 설정해두고 커서 없게 하면 얼추 느낌*/
@@ -29,16 +29,17 @@
             font-size: 130px;
             color: white;
             text-align: center;
-            -webkit-animation:colorchange 100s infinite alternate;
+            -webkit-animation: color-change 100s infinite alternate;
             -moz-animation: color-change 100s infinite alternate;
             -o-animation: color-change 100s infinite alternate;
             -ms-animation: color-change 100s infinite alternate;
             animation: color-change 100s infinite alternate;
 			margin-top: 50px;
             margin-bottom: 50px;
+			cursor: none;
         }
         
-        @-webkit-keyframes colorchange {
+        @-webkit-keyframes color-change {
           0% {color: #333333;}
           25% {color: #e32e89;}
           50% {color: #2980b9;}
@@ -85,234 +86,256 @@
 <body>
 
 
-    <div id="fullpage">
+	<div id="fullpage">
 
-        <!--       section 0 : Main-->
+		<!--       section 0 : Main-->
 
-        <div class="section " id="section0" data-anchor="section00">
-            <!--                       background video-->
-            <video id="myVideo" loop muted data-autoplay>
-                <source src="./source/video/main3.mp4" type="video/mp4">
-            </video>
-
-
-
-            <div class="layer layer0">
-                <div class="layer-container">
-                    <div id="layer0_content" class="content">
-                        <div class="layer-area">
-                            <div class="header">
-                                <div class="logo">
-                                    <a href="index.html"><h1>Bjork</h1></a>
-                                </div>
-                                <div class="bottom-menu">
-                                    <table>
-                                        <tr>
-                                            <td>&nbsp;</td>
-                                            <td>
-                                            <img id="go-down" src="./source/img/arrow2-bottom.png" alt="">
-                                            </td>
-                                            <td>&nbsp;</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+		<div class="section " id="section0" data-anchor="section00">
+			<!--                       background video-->
+			<video id="myVideo" loop muted data-autoplay>
+				<source src="./source/video/main3.mp4" type="video/mp4">
+			</video>
 
 
 
-        <!--        section 1-->
+			<div class="layer layer0">
+				<div class="layer-container">
+					<div id="layer0_content" class="content">
+						<div class="layer-area">
+							<div class="header">
+								<div class="logo">
+									<a href="index.html">
+										<h1 class="logo">Bjork</h1>
+									</a>
+								</div>
+								<div class="bottom-menu">
+									<table>
+										<tr>
+											<td>&nbsp;</td>
+											<td>
+												<img id="go-down" src="./source/img/arrow2-bottom.png" alt="">
+											</td>
+											<td>&nbsp;</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-        <div class="section" id="section1">
-            <div class="layer layer1">
-                <div class="layer-container">
-                    <div id="layer1_content" class="content">
-                        <div class="layer-area" style="text-align: center">
-                            <!--                       one column-->
-                            <div class="layer1-column layer1-left">
-                            	<h1>SugarCubes</h1>
-                            </div>
-                            <div class="layer1-column layer1-right">
-                            	<h1>Solo Debut</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="section" id="section2">
-            
-                            <div class="swiper-container" style="margin-top: 200px;">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide" style="background-image:url(./source/img/debut.jpg)">
-                                        
-                                    </div>
-                                    <div class="swiper-slide" style="background-image:url(./source/img/post.jpg)">
-<!--                                        <a class="slide-text" href="hyperballad.html">More</a>-->
-                                    </div>
-                                    <div class="swiper-slide" style="background-image:url(./source/img/homogenic.jpg)">
-<!--                                    <a class="slide-text" href="./pin_layout02.html">More</a>-->
-                                    </div>
-                                    <div class="swiper-slide" style="background-image:url(./source/img/vespertine.jpg)">
-<!--                                    <a class="slide-text" href="./pin_layout03.html">More</a>-->
-                                    </div>
-                                    <div class="swiper-slide" style="background-image:url(./source/img/utopia.jpg)">
-<!--                                    <a class="slide-text" href="./pin_layout04.html">More</a>-->
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                  
+		</div>
 
 
 
-        <div class="section" id="section3">
-            <div class="layer layer3">
-                <div class="layer-container">
-                    <div id="layer3_content" class="content">
-                        <div class="layer-area">
-                            <h1>서버 연결 모르는 관계로 콘텐츠 다시 구상해라.</h1>
-                            <div style="position: relative;top: -100px;left: 400px;line-height: 1.8;">
-                            	<h2>일단 세부페이지 링크들</h2>
-                            	<ul>
-                            		<li><a href="bigtimesensuality.html">Big Time Sensuality</a></li>
-                            		<li><a href="hyperballad.html">Hyperballad</a></li>
-                            		<li><a href="hunter.html">Hunter</a></li>
-                            		<li><a href="paganpoetry.html">Pagan Poetry</a></li>
-                            		<li><a href="thegate.html">The Gate</a></li>
-                            	</ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+		<!--        section 1-->
 
-    
-    
-    <div id="cursor-dot">&nbsp;</div>
+		<div class="section" id="section1">
+			<div class="layer layer1">
+				<div class="layer-container">
+					<div id="layer1_content" class="content">
+						<div class="layer-area" style="text-align: center">
+							<!--                       one column-->
+							<div class="layer1-column layer1-left">
+								<h1>SugarCubes</h1>
+							</div>
+							<div class="layer1-column layer1-right">
+								<h1>Solo Debut</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="section" id="section2">
+
+			<div class="swiper-container" style="margin-top: 200px;">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background-image:url(./source/img/debut.jpg)">
+
+					</div>
+					<div class="swiper-slide" style="background-image:url(./source/img/post.jpg)">
+						<!--                                        <a class="slide-text" href="hyperballad.html">More</a>-->
+					</div>
+					<div class="swiper-slide" style="background-image:url(./source/img/homogenic.jpg)">
+						<!--                                    <a class="slide-text" href="./pin_layout02.html">More</a>-->
+					</div>
+					<div class="swiper-slide" style="background-image:url(./source/img/vespertine.jpg)">
+						<!--                                    <a class="slide-text" href="./pin_layout03.html">More</a>-->
+					</div>
+					<div class="swiper-slide" style="background-image:url(./source/img/utopia.jpg)">
+						<!--                                    <a class="slide-text" href="./pin_layout04.html">More</a>-->
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+		<div class="section" id="section3">
+			<div class="layer layer3">
+				<div class="layer-container">
+					<div id="layer3_content" class="content">
+						<div class="layer-area">
+							<h1>서버 연결 모르는 관계로 콘텐츠 다시 구상해라.</h1>
+							<div style="position: relative;top: -100px;left: 400px;line-height: 1.8;">
+								<h2>일단 세부페이지 링크들</h2>
+								<ul>
+									<li><a href="bigtimesensuality.html">Big Time Sensuality</a></li>
+									<li><a href="hyperballad.html">Hyperballad</a></li>
+									<li><a href="hunter.html">Hunter</a></li>
+									<li><a href="paganpoetry.html">Pagan Poetry</a></li>
+									<li><a href="thegate.html">The Gate</a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="cursor-dot">&nbsp;</div>
 	<script src="./vendor/gsap/TweenMax.min.js" type="text/javascript"></script>
 	<script src="./js/script.js" type="text/javascript"></script>
-   
-   
-    <script type="text/javascript" src="./js/fullpage.js"></script>
-    <script type="text/javascript">
-        var myFullpage = new fullpage('#fullpage', {
-            sectionsColor: ['#ffffff'],
-			navigation:true,
-        navigationTooltips: ['Main', 'About Bjork', 'Bjork&apos;s Amazing Works', 'Credits+Comment'],
-        showActiveTooltip: true,
-        menu: '#menu'
-        });
-    </script>
 
-    <!-- Swiper JS -->
-    <script src="./dist/js/swiper.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 3,
-            initialSlide: 0,
-            coverflowEffect: {
-                rotate: -15,
-                loop: true,
-                stretch: 0,
-                depth: 350,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
+	<script type="text/javascript" src="./js/fullpage.js"></script>
+	<script type="text/javascript">
+		var myFullpage = new fullpage('#fullpage', {
+			sectionsColor: ['#ffffff'],
+			navigation: true,
+			navigationTooltips: ['Main', 'About Bjork', 'Bjork&apos;s Amazing Works', 'Credits+Comment'],
+			showActiveTooltip: true,
+			menu: '#menu'
+		});
+	</script>
 
-            effect: 'coverflow',
-            loop: true,
-            centeredSlides: true,
-            slidesPerView: 3,
-            initialSlide: 0,
-            keyboardControl: true,
-            mousewheelControl: true,
-            lazyLoading: true,
-            preventClicks: false,
-            preventClicksPropagation: false,
-            lazyLoadingInPrevNext: true,
-            coverflow: {
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: false,
-            }
-        });
+	<!-- Swiper JS -->
+	<script src="./dist/js/swiper.min.js"></script>
 
-        var $slide = document.getElementsByClassName(".swiper-slide");
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			effect: 'coverflow',
+			grabCursor: true,
+			centeredSlides: true,
+			slidesPerView: 3,
+			initialSlide: 0,
+			coverflowEffect: {
+				rotate: -15,
+				loop: true,
+				stretch: 0,
+				depth: 350,
+				modifier: 1,
+				slideShadows: true,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+			},
 
-        if ($slide.zIndex !== 1) {
-            var $a = document.getElementsByTagName("a");
-            //            $a.remove();
-        }
-    </script>
+			effect: 'coverflow',
+			loop: true,
+			centeredSlides: true,
+			slidesPerView: 3,
+			initialSlide: 0,
+			keyboardControl: true,
+			mousewheelControl: true,
+			lazyLoading: true,
+			preventClicks: false,
+			preventClicksPropagation: false,
+			lazyLoadingInPrevNext: true,
+			coverflow: {
+				rotate: 0,
+				stretch: 0,
+				depth: 100,
+				modifier: 1,
+				slideShadows: false,
+			}
+		});
 
-    <script type="text/javascript">
-        var $tabMenu = document.querySelector("#tab-menu");
-        var $tabMenuEl = document.querySelectorAll('a');
-        // console.log($tabMenu, $tabMenuEl);
-        var $tabContent = document.getElementsByClassName('tab-content');
-        //console.log($tabContent);
+		var $slide = document.getElementsByClassName(".swiper-slide");
 
-        for (var i = 0; i < $tabMenuEl.length; i++) {
-            /*
-            console.log(i);
-            $tabMenuEl[i].addEventListener('click', function(event){
-              event.preventDefault();
-              console.log('click' + i);
-            });
-            */
-            tabMenuClick(i);
-        }
+		if ($slide.zIndex !== 1) {
+			var $a = document.getElementsByTagName("a");
+			//            $a.remove();
+		}
+	</script>
 
-        function tabMenuClick(index) {
-            //i의 순서 체크할 수 있게 인덱스의 전달인자로 활용
-            $tabMenuEl[index].addEventListener('click', function(event) {
-                event.preventDefault();
-                //console.log(index);
-                //해당 순서를 출력
-                for (var i = 0; i < $tabMenuEl.length; i++) {
-                    //모든 요소에서 셀렉티드 삭제
-                    $tabMenuEl[i].classList.remove('selected');
-                    $tabContent[i].classList.remove('selected');
-                    if (i === index) {
-                        //포문 실행 시 자신의 순서와 i 일치하나 본다 같으면 셀렉티드 추가
-                        $tabMenuEl[i].classList.add('selected');
-                        $tabContent[i].classList.add('selected');
-                    }
-                }
-                /*
-                for(var i=0; i<$tapContent.length; i++){
-                  $tabContent[i].classList.remove('selected');
-                  if(i === index){
-                    $tapContent[i].classList.add('selected');
-                  }
-                }
-                */
-            });
-        }
-    </script>
-    
-    
+	<script type="text/javascript">
+		var $tabMenu = document.querySelector("#tab-menu");
+		var $tabMenuEl = document.querySelectorAll('a');
+		// console.log($tabMenu, $tabMenuEl);
+		var $tabContent = document.getElementsByClassName('tab-content');
+		//console.log($tabContent);
+
+		for (var i = 0; i < $tabMenuEl.length; i++) {
+			/*
+			console.log(i);
+			$tabMenuEl[i].addEventListener('click', function(event){
+			  event.preventDefault();
+			  console.log('click' + i);
+			});
+			*/
+			tabMenuClick(i);
+		}
+
+		function tabMenuClick(index) {
+			//i의 순서 체크할 수 있게 인덱스의 전달인자로 활용
+			$tabMenuEl[index].addEventListener('click', function(event) {
+				event.preventDefault();
+				//console.log(index);
+				//해당 순서를 출력
+				for (var i = 0; i < $tabMenuEl.length; i++) {
+					//모든 요소에서 셀렉티드 삭제
+					$tabMenuEl[i].classList.remove('selected');
+					$tabContent[i].classList.remove('selected');
+					if (i === index) {
+						//포문 실행 시 자신의 순서와 i 일치하나 본다 같으면 셀렉티드 추가
+						$tabMenuEl[i].classList.add('selected');
+						$tabContent[i].classList.add('selected');
+					}
+				}
+				/*
+				for(var i=0; i<$tapContent.length; i++){
+				  $tabContent[i].classList.remove('selected');
+				  if(i === index){
+				    $tapContent[i].classList.add('selected');
+				  }
+				}
+				*/
+			});
+		}
+	</script>
+
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NDc1OC8yMTI3OQ==">
+								<script type="text/javascript">
+									(function(d, s) {
+										var j, e = d.getElementsByTagName(s)[0];
+
+										if (typeof LivereTower === 'function') {
+											return;
+										}
+
+										j = d.createElement(s);
+										j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+										j.async = true;
+
+										e.parentNode.insertBefore(j, e);
+									})(document, 'script');
+								</script>
+								<noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+							</div>
+
 </body>
 </html>
