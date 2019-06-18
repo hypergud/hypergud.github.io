@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>sub1</title>
+	<title>Pagan Poetry</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
 	<meta name="description" content="fullPage very simple demo." />
 	<meta name="keywords" content="fullpage,jquery,demo,simple" />
@@ -13,28 +13,47 @@
 	<link rel="stylesheet" type="text/css" href="./css/sub-layout.css">
 	<!--    <link rel="stylesheet" href="./css/style.css"/>-->
 	<link rel="stylesheet" href="./css/sub-style.css">
+	<link rel="stylesheet" type="text/css" href="./css/hamburger-sub.css">
 
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="./dist/css/swiper.min.css">
 
-<style>
-		.embed-container {
- position: relative; 
-padding-bottom: 56.25%; 
-			
-height: 0; 
-overflow: hidden; 
-max-width: 100%; } 
-.embed-container iframe, .embed-container object, .embed-container embed { 
-position: absolute; 
-top: 8.5vh;
-left: 12.5vw;
-/*
-width:100%; 
-height:100%; 
-*/
-		}
+
+
+	<style>
+		.color-test {
+      flex-shrink: 2;
+      text-align: center;
+      font-size: 10px;
+		color: transparent;
+/*      line-height: 1em;*/
+      font-family: monospace;
+    }
+		.color-el {
+/*      display: flex;*/
+/*      align-items: center;*/
+/*      justify-content: center;*/
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-top: -35px;
+    }
+		
+		
+		#section0,#section1,#section2,#section3{
+		background-size: cover;
+		background-attachment: fixed;
+	}
+		
+		#section0{
+		background-image: url(source/img/04.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+		
 </style>
+
+
 </head>
 
 <body>
@@ -50,28 +69,31 @@ height:100%;
 					<div id="layer0_content" class="content">
 						<div class="layer-area">
 							<div class="header">
-								<div class="title">
+								<div id="mySidenav" class="sidenav">
+									<a href="javascript:void(0)" id="close" class="closebtn" onclick="closeNav()">&times;</a>
+									<a id="sub--menu" class="sub-menu" href="index.html">Main</a>
+									<a class="sub-menu" href="bigtimesensuality.html">Big Time Sensuality</a>
+									<a class="sub-menu" href="itsohsoquiet.html">It's Oh So Quiet</a>
+									<a class="sub-menu" href="hunter.html">Hunter</a>
+									<a class="sub-menu" href="paganpoetry.html">Pagan Poetry</a>
+									<a class="sub-menu" href="thegate.html">The Gate</a>
+									<!--									<a class="sub-menu" href="index.html">Main</a>-->
+								</div>
+
+								<span id="ham" style="font-size:23px; cursor:pointer;color:#848484;" onclick="openNav()">&#9776;</span>
+							</div>
+							
+							<div class="title">
 									<h1 class="song-title">Pagan Poetry</h1>
 									<h2 class="song-sub">Directed by Nick Knight</h2>
-									<h4>
-										Released	5 November 2001 <br>
-Format	CD DVD<br>
-Length	5:17 (album version) 4:01 (radio edit)<br>
-Label	One Little Indian<br>
-Songwriter(s)	Björk<br>
-Producer(s)	Björk Marius de Vries<br>
-									</h4>
+									<h5 class="infos">
+										Released&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 November 2001 <br>
+Length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5:17 (album version) 4:01 (radio edit)<br>
+Label&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One Little Indian<br>
+Songwriter(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Björk<br>
+Producer(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Björk Marius de Vries<br>
+									</h5>
 								</div>
-								<div class="bottom-menu">
-									<table>
-										<tr>
-											<td>&nbsp;</td>
-											<td><img id="go-down" src="./source/img/arrow2-bottom.png" alt=""></td>
-											<td>&nbsp;</td>
-										</tr>
-									</table>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -81,12 +103,22 @@ Producer(s)	Björk Marius de Vries<br>
 
 
 
+
+
 		<!--        section 1-->
-		<div class="section" id="section1" data-anchor="section01">
+		<div class="section color-section color-tests color-test rgb-to-rgb" id="section1" data-anchor="section01">#ffffff<br>▾<br>rgb(20, 20, 20)
 			<!--                       background video-->
-			<div class="embed-container">
-				<iframe width="75%" height="75%" src="https://www.youtube.com/embed/Ol_0srrhkKA" frameborder="0" allowfullscreen>
-				</iframe></div>
+
+		<div id="myVideo">
+			<video controls style="position: relative;
+		top:7vh;">
+				<source src="./source/video/pp_480.mp4" type="video/mp4">
+			</video>
+			
+		</div>
+			
+
+
 
 		</div>
 
@@ -100,7 +132,7 @@ Producer(s)	Björk Marius de Vries<br>
 								<tr>
 									<td colspan="1">
 										<div class="player-container" onclick="play()">
-										<audio id="audio_play" src="./source/music/pp.mp3"></audio>
+										<audio data-keepplaying id="audio_play" src="./source/music/pp.mp3"></audio>
 											<img class="player-item player-album" src="./source/img/vespertine.jpg" alt="album-cover" width="205px" />
 											<img class="player-item player-vinyl" src="http://katehummer.com/resources/vinyl-player/vinyl-alt.png" alt="vinyl" />
 											<img class="player-item player-shadow" src="http://katehummer.com/resources/vinyl-player/vinyl-shadow.png" alt="vinyl-shadow" />
@@ -147,12 +179,38 @@ Producer(s)	Björk Marius de Vries<br>
 	<div id="cursor-dot">&nbsp;</div>
 	<script src="./vendor/gsap/TweenMax.min.js" type="text/javascript"></script>
 	<script src="./js/script.js" type="text/javascript"></script>
+	<script src="./js/anime.min.js"></script>
+
+	<script>
+		var colorTestEls = document.querySelectorAll('.color-test');
+
+		function createTest(el) {
+			var testHtml = el.innerHTML;
+			var testValues = testHtml.split('<br>▾<br>');
+			var colorEl = document.createElement('div');
+			colorEl.classList.add('color-el');
+			el.appendChild(colorEl);
+			anime({
+				targets: colorEl,
+				backgroundColor: [testValues[0], testValues[1]],
+				direction: 'alternate',
+				easing: 'easeInOutSine',
+				duration: 2000,
+				loop: false
+
+			});
+		}
+
+		for (var i = 0; i < colorTestEls.length; i++) createTest(colorTestEls[i]);
+	</script>
 
 
 	<script type="text/javascript" src="./js/fullpage.js"></script>
 	<script type="text/javascript">
 		var myFullpage = new fullpage('#fullpage', {
-			sectionsColor: ['#ffffff']
+			sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+			verticalCentered: false,
+			css3: false
 		});
 	</script>
 
@@ -192,22 +250,47 @@ Producer(s)	Björk Marius de Vries<br>
 			style: 'carousel',
 			spacing: -0.5,
 			scrollwheel: false,
-			//nav: 'after',
 			buttons: false
 		});
 	</script>
-	
-	<script type="text/javascript"> 
-function play() { 
-    var audio = document.getElementById("audio_play"); 
-    if (audio.paused) { 
-        audio.play(); 
-    }else{ 
-        audio.pause(); 
-        audio.currentTime = 0 
-    } 
-} 
-</script>
+
+	<script type="text/javascript">
+		function play() {
+			var audio = document.getElementById("audio_play");
+			if (audio.paused) {
+				audio.play();
+			} else {
+				audio.pause();
+				audio.currentTime = 0
+			}
+		}
+	</script>
+
+	<script type="text/javascript">
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("ham").style.color = "transparent";
+			document.getElementById("close").style.color = "#848484";
+			document.getElementById("close").hover.style.color = "#fff";
+			document.getElementById("sub--menu").hover.style.color = "#f5419c";
+			var all = document.getElementsByClassName("sub-menu");
+			for (var i = 0; i <= all.length; i++) {
+				all[i].style.color = "#848484";
+				all[i].hover.style.color = "#f5419c";
+			}
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("ham").style.color = "#848484";
+			document.getElementById("close").style.color = "transparent";
+			document.getElementById("sub--menu").hover.style.color = "transparent";
+			var all = document.getElementsByClassName("sub-menu");
+			for (var i = 0; i <= all.length; i++) {
+				all[i].style.color = "transparent";
+			}
+		}
+	</script>
 
 
 </body>

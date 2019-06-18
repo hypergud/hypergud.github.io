@@ -1,0 +1,64 @@
+/*햄버거 메뉴*/
+.header{
+	width: 100%;
+	z-index: 9999;
+	position: fixed;
+}
+
+/*전체 감쌈*/
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: -0.5vw;
+	background-color: rgba(0, 0, 0, 0);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	display: block;
+}
+
+/*모든 글자들*/
+.sidenav a {
+	padding: 8px 8px 8px 40px;
+	text-decoration: none;
+	font-size: 13.5px;
+	font-weight: 400;
+	color: #888;
+	display: block;
+	transition: 0.3s;
+	font-family: 'Noto Sans KR', sans-serif;
+	overflow-x: hidden;
+}
+
+.sidenav a:hover {
+	color: #f5419c;
+}
+
+/*실질적 링크 연결 메뉴들*/
+a.sub-menu {
+	position: relative;
+	top: 1.5vh;
+	padding-top: 13px;
+}
+
+/*닫는 버튼*/
+.sidenav .closebtn {
+	position: absolute;
+	top: -2.8px;
+	left: 29px;
+	font-size: 40px;
+	margin-left: -32px;
+	margin-top: 10px;
+}
+
+/*원래 햄버거*/
+span {
+	position: fixed;
+	top: -1.32vw;
+	left: 1.6vw;
+	margin-right: 100px;
+	margin-top: 55px;
+}

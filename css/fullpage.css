@@ -174,9 +174,9 @@ html.fp-enabled,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span{
-    height: 12px;
-    width: 12px;
-    margin: -6px 0 0 -6px;
+    height: 11px;
+    width: 11px;
+    margin: -6px 0px 0 -5px;
     border-radius: 100%;
 	background-color: #e32e89;
 	
@@ -189,45 +189,11 @@ html.fp-enabled,
     height: 6px;
     width: 6px;
     border: 0;
-    background-color: #434343;
+    background-color: #717171;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
 }
-
-@-webkit-keyframes color-change {
-          0% {background-color: #333333;}
-          25% {background-color: #e32e89;}
-          50% {background-color: #2980b9;}
-          75% {background-color: #93b0bc;}
-          100% {background-color: #ff74fa;} 
-        }
-        
-        @-moz-keyframes color-change {
-          0% {background-color: #333333;}
-          25% {background-color: #e32e89;}
-          50% {background-color: #2980b9;}
-          75% {background-color: #93b0bc;}
-          100% {background-color: #ff74fa;}  
-        }
-        @-o-keyframes color-change {
-          0% {background-color: #333333;}
-          25% {background-color: #e32e89;}
-          50% {background-color: #2980b9;}
-          75% {background-color: #93b0bc;}
-          100% {background-color: #ff74fa;}  
-        }
-        @keyframes color-change {
-          0% {background-color: #333333;}
-          25% {background-color: #e32e89;}
-          50% {background-color: #2980b9;}
-          75% {background-color: #93b0bc;}
-          100% {background-color: #ff74fa;} 
-        }
 
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span{
@@ -238,9 +204,9 @@ html.fp-enabled,
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;
-    top: -2px;
+    top: 1px;
 /*	top: 500px;*/
-    color: #e32e89;
+    color: #f5419c;
     font-size: 14px;
 	font-weight: 400;
     white-space: nowrap;

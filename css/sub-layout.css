@@ -51,18 +51,26 @@
 		position: absolute;
 		right: 0;
 		bottom: 0;
-		top:0;
-		right:0;
-		width: 100%;
-		height: 100%;
+		top:13vh;
+		right:24vw;
+		width: 50vw;
+		height: auto;
+		margin: auto auto;
+		
+	}
+#myVideo video{
+	position: relative;
+	width: 100%;
 		background-size: 100% 100%;
- 		background-color: black; /* in case the video doesn't fit the whole page*/
-  		/* background-image: ; */
+ 		background-color: black;
+	
+		/* in case the video doesn't fit the whole page*/
   		background-position: center center;
   		background-size: contain;
    		object-fit: cover; /*cover video background */
    		z-index:3;
-	}
+/*		margin: 0 auto;*/
+}
         
         
         /* Layer with position absolute in order to have it over the video
@@ -96,26 +104,6 @@
 		color: #fff;
 	}
 
-
-    
-    /*sec0 css*/
-    img#go-down {
-        width: 12%;
-        text-align: center;
-        -webkit-animation:blink 1s ease-in-out infinite alternate;
-        -moz-animation:blink 1s ease-in-out infinite alternate;
-        animation:blink 1s ease-in-out infinite alternate;
-    }
-        .bottom-menu table{
-/*            margin-top: 200px;*/
-            width: 100%;
-            position: relative;
-            top: 300px;
-        }
-        .bottom-menu td{
-            width: 33.3333%;
-            text-align: center;
-        }
 
 
 /*레이어1*/
@@ -177,20 +165,3 @@
         }
         
         td#album{visibility: hidden;}
-
-
-
-/*레이어마지막*/
-
-*{margin:0;padding:0}
-    body{font-family:'Roboto', sans-serif}
-    a{text-decoration:none}
-    ul{list-style-type:none}
-    .tab-menu{width:800px;margin:0 auto;margin-top:50px}
-    .tab-menu ul{display:flex}
-    .tab-menu li{flex:1;height:50px}
-    .tab-menu li a{position:relative;display:block;width:100%;height:100%;background-color:#999;text-transform:uppercase;text-align:center;color:#fff;line-height:50px}
-    .tab-menu li a.selected{background-color:#000;cursor:default}
-    .tab-container{width:800px;margin:0 auto;border:1px solid #000;box-sizing:border-box}
-    .tab-container .tab-content{display:none;padding:30px;height:450px;box-sizing:border-box}
-.tab-container .tab-content.selected{display:block}

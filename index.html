@@ -3,20 +3,21 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>index</title>
+	<title>Nice to see you, Björk !</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
 	<meta name="description" content="fullPage very simple demo." />
 	<meta name="keywords" content="fullpage,jquery,demo,simple" />
 	<meta name="Resource-type" content="Document" />
 
 	<link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
-
-	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./css/hamburger-origin.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./css/layout.css">
 
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="./dist/css/swiper.min.css">
 
-	<link rel="stylesheet" type="text/css" href="./css/layout.css">
+	
 
 
 	<style>
@@ -26,8 +27,7 @@
 		}
         .logo {
             font-family: "bjorkfont";
-/*			font-family: "Arial";*/
-            font-size: 130px;
+			font-size: 13.4vh;
             color: white;
             text-align: center;
             -webkit-animation: color-change 100s infinite alternate;
@@ -35,9 +35,10 @@
             -o-animation: color-change 100s infinite alternate;
             -ms-animation: color-change 100s infinite alternate;
             animation: color-change 100s infinite alternate;
-			margin-top: 50px;
-            margin-bottom: 50px;
-			cursor: none;
+			width: 21vw;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 40vh;
         }
         
         @-webkit-keyframes color-change {
@@ -77,10 +78,23 @@
           100% {color: #ff74fa;} 
         }
 
+		.logo:active{
+			-webkit-animation:blink 1s ease-in-out alternate;
+        -moz-animation:blink 1s ease-in-out alternate;
+        animation:blink 1s ease-in-out  alternate;
+		}
         
         a{text-decoration:none}
-    ul{list-style-type:none}
+   		ul{list-style-type:none}
+		
+		
+			
+		#section0,#section1,#section2,#section3{
+		background-size: cover;
+		background-attachment: fixed;
+	}
         
+		
     </style>
 </head>
 
@@ -93,10 +107,9 @@
 
 		<div class="section " id="section0" data-anchor="section00">
 			<!--                       background video-->
-			<video id="myVideo" loop muted data-autoplay>
+			<video id="myVideo" data-keepplaying loop muted data-autoplay>
 				<source src="./source/video/main3.mp4" type="video/mp4">
 			</video>
-
 
 
 			<div class="layer layer0">
@@ -104,12 +117,9 @@
 					<div id="layer0_content" class="content">
 						<div class="layer-area">
 							<div class="header">
-								<div class="logo">
-									<a href="index.html">
-										<h1 class="logo">Bjork</h1>
-<!--										<h1 class="logo">Bjork</h1>-->
-									</a>
-								</div>
+
+
+								<!--
 								<div class="bottom-menu">
 									<table>
 										<tr>
@@ -121,6 +131,25 @@
 										</tr>
 									</table>
 								</div>
+-->
+								<div id="mySidenav" class="sidenav">
+									<a href="javascript:void(0)" id="close" class="closebtn" onclick="closeNav()">&times;</a>
+									<a id="sub--menu" class="sub-menu" href="bigtimesensuality.html">Big Time Sensuality</a>
+									<a class="sub-menu" href="hyperballad.html">It's Oh So Quiet</a>
+									<a class="sub-menu" href="hunter.html">Hunter</a>
+									<a class="sub-menu" href="paganpoetry.html">Pagan Poetry</a>
+									<a class="sub-menu" href="thegate.html">The Gate</a>
+									<!--									<a class="sub-menu" href="index.html">Main</a>-->
+								</div>
+
+								<span id="ham" style="font-size:23px; cursor:pointer;color:#848484;" onclick="openNav()">&#9776;</span>
+							</div>
+
+							<div class="logo">
+								<a href="index.html">
+									<h1 class="logo">Björk</h1>
+									<!--										<h1 class="logo">Bjork</h1>-->
+								</a>
 							</div>
 						</div>
 					</div>
@@ -185,18 +214,8 @@
 				<div class="layer-container">
 					<div id="layer3_content" class="content">
 						<div class="layer-area">
-							<h1>서버 연결 모르는 관계로 콘텐츠 다시 구상해라.</h1>
-							<div style="position: relative;top: -100px;left: 400px;line-height: 1.8;">
-								<h2>일단 세부페이지 링크들</h2>
-								<ul>
-									<li><a href="bigtimesensuality.html">Big Time Sensuality</a></li>
-									<li><a href="hyperballad.html">Hyperballad</a></li>
-									<li><a href="hunter.html">Hunter</a></li>
-									<li><a href="paganpoetry.html">Pagan Poetry</a></li>
-									<li><a href="thegate.html">The Gate</a></li>
-								</ul>
-							</div>
 							
+
 						</div>
 					</div>
 				</div>
@@ -216,7 +235,7 @@
 		var myFullpage = new fullpage('#fullpage', {
 			sectionsColor: ['#ffffff'],
 			navigation: true,
-			navigationTooltips: ['Main', 'About Bjork', 'Bjork&apos;s Amazing Works', 'Credits+Comment'],
+			navigationTooltips: ['Main', 'About Bjork', 'Björk&apos;s Amazing Works', 'Credits+Comment'],
 			showActiveTooltip: true,
 			menu: '#menu'
 		});
@@ -274,70 +293,32 @@
 	</script>
 
 	<script type="text/javascript">
-		var $tabMenu = document.querySelector("#tab-menu");
-		var $tabMenuEl = document.querySelectorAll('a');
-		// console.log($tabMenu, $tabMenuEl);
-		var $tabContent = document.getElementsByClassName('tab-content');
-		//console.log($tabContent);
-
-		for (var i = 0; i < $tabMenuEl.length; i++) {
-			/*
-			console.log(i);
-			$tabMenuEl[i].addEventListener('click', function(event){
-			  event.preventDefault();
-			  console.log('click' + i);
-			});
-			*/
-			tabMenuClick(i);
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("ham").style.color = "transparent";
+			document.getElementById("close").style.color = "#848484";
+			document.getElementById("close").hover.style.color = "#fff";
+			document.getElementById("sub--menu").hover.style.color = "#f5419c";
+			var all = document.getElementsByClassName("sub-menu");
+			for (var i = 0; i <= all.length; i++) {
+				all[i].style.color = "#848484";
+				all[i].hover.style.color = "#f5419c";
+			}
 		}
 
-		function tabMenuClick(index) {
-			//i의 순서 체크할 수 있게 인덱스의 전달인자로 활용
-			$tabMenuEl[index].addEventListener('click', function(event) {
-				event.preventDefault();
-				//console.log(index);
-				//해당 순서를 출력
-				for (var i = 0; i < $tabMenuEl.length; i++) {
-					//모든 요소에서 셀렉티드 삭제
-					$tabMenuEl[i].classList.remove('selected');
-					$tabContent[i].classList.remove('selected');
-					if (i === index) {
-						//포문 실행 시 자신의 순서와 i 일치하나 본다 같으면 셀렉티드 추가
-						$tabMenuEl[i].classList.add('selected');
-						$tabContent[i].classList.add('selected');
-					}
-				}
-				/*
-				for(var i=0; i<$tapContent.length; i++){
-				  $tabContent[i].classList.remove('selected');
-				  if(i === index){
-				    $tapContent[i].classList.add('selected');
-				  }
-				}
-				*/
-			});
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("ham").style.color = "#848484";
+			document.getElementById("close").style.color = "transparent";
+			document.getElementById("sub--menu").hover.style.color = "transparent";
+			var all = document.getElementsByClassName("sub-menu");
+			for (var i = 0; i <= all.length; i++) {
+				all[i].style.color = "transparent";
+			}
 		}
 	</script>
 
 
-<div id="lv-container" data-id="city" data-uid="MTAyMC80NDc1OC8yMTI3OQ==">
-								<script type="text/javascript">
-									(function(d, s) {
-										var j, e = d.getElementsByTagName(s)[0];
-
-										if (typeof LivereTower === 'function') {
-											return;
-										}
-
-										j = d.createElement(s);
-										j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-										j.async = true;
-
-										e.parentNode.insertBefore(j, e);
-									})(document, 'script');
-								</script>
-								<noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
-							</div>
 
 </body>
 </html>

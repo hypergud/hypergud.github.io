@@ -1,7 +1,5 @@
 /*레이어들*/
 
-
-
 .layer {
     display: table;
     width: 100%;
@@ -16,11 +14,12 @@
     width: 100%;
     height: 100%;
     margin: 0 auto;
-        }
+	
+}
 
 .layer .layer-area {
-    width: 85%;
-/*    height: 85%;*/
+    width: 85vw;
+    height: 80vh;
     margin-right: auto;
     margin-left: auto;
 }
@@ -108,20 +107,26 @@
     img#go-down {
         width: 12%;
         text-align: center;
-        -webkit-animation:blink 1s ease-in-out infinite alternate;
-        -moz-animation:blink 1s ease-in-out infinite alternate;
-        animation:blink 1s ease-in-out infinite alternate;
+        -webkit-animation:blink 0.7s ease-in-out infinite alternate;
+        -moz-animation:blink 0.7s ease-in-out infinite alternate;
+        animation:blink 0.7s ease-in-out infinite alternate;
     }
         .bottom-menu table{
 /*            margin-top: 200px;*/
             width: 100%;
             position: relative;
-            top: 300px;
+			
         }
         .bottom-menu td{
             width: 33.3333%;
             text-align: center;
         }
+
+
+#section0,#section1,#section2,#section3{
+		background-size: cover;
+		background-attachment: fixed;
+	}
 
 
 /*레이어1*/
