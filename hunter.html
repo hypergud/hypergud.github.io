@@ -9,18 +9,22 @@
 	<meta name="keywords" content="fullpage,jquery,demo,simple" />
 	<meta name="Resource-type" content="Document" />
 
-	<link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="./css/fullpage-bts.css" />
 	<link rel="stylesheet" type="text/css" href="./css/sub-layout.css">
-	<!--    <link rel="stylesheet" href="./css/style.css"/>-->
-	<link rel="stylesheet" href="./css/sub-style.css">
+	<link rel="stylesheet" href="./css/sub-style3.css">
 	<link rel="stylesheet" type="text/css" href="./css/hamburger-sub.css">
+	<link rel="stylesheet" type="text/css" href="./css/sub-gallery.css">
 
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="./dist/css/swiper.min.css">
 
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&display=swap&subset=korean" rel="stylesheet">
 
 
 	<style>
+		body{
+			font-family: 'Noto Sans KR', sans-serif;
+		}
 		.color-test {
       flex-shrink: 2;
       text-align: center;
@@ -50,6 +54,12 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+		
+		#section2{
+			background-image: url(source/img/03-2.png);
+		}
+		a{text-decoration:none}
+    ul{list-style-type:none}
 		
 </style>
 </head>
@@ -100,7 +110,7 @@
 									<h2 class="song-sub">Directed by Paul White</h2>
 									<h5 class="infos">
 										Released&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 October 1998<br>
-Recorded&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1997<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; El Cortijo Studios(Málaga, Spain) <br>
+Recorded&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1997<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El Cortijo Studios(Málaga, Spain) <br>
 Genre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Electronica baroque pop folktronica drum and bass <br>
 Length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4:12 (album version) 3:29 (radio edit)
 									</h5>
@@ -131,56 +141,191 @@ Length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
 		</div>
 
 
+
 		<div class="section" id="section2">
 			<div class="layer layer2">
 				<div class="layer-container">
 					<div id="layer2_content" class="content">
 						<div class="layer-area">
-							<table>
-								<tr>
-									<td colspan="1">
-										<div class="player-container" onclick="play()">
-										<audio data-keepplaying id="audio_play" src="./source/music/h.mp3"></audio>
-											<img class="player-item player-album" src="./source/img/homogenic.jpg" alt="album-cover" width="205px" />
-											<img class="player-item player-vinyl" src="http://katehummer.com/resources/vinyl-player/vinyl-alt.png" alt="vinyl" />
-											<img class="player-item player-shadow" src="http://katehummer.com/resources/vinyl-player/vinyl-shadow.png" alt="vinyl-shadow" />
+							<div id="tab-menu" class="tab-menu">
+								<ul>
+									<li><a href="#" class=" tab-a">Album art</a></li>
+									<li><a class="tab-a" href="#">Music Video Still Photo</a></li>
+									<li><a class="tab-a selected" href="#">1998's bjork</a></li>
+								</ul>
+							</div>
+							<div class="tab-container">
+								<div class="tab-content">
+<!--									<h2>Click on a thumbnail image</h2>-->
+									<div class="wrapper">
+
+										<div class="full-image"></div>
+
+										<div class="thumbnails">
+
+											<label>
+												<input type="radio" name="full-image" checked>
+												<div class="full-image">
+													<img class="big" src="./source/img/h/00.PNG" alt="Pic1" />
+													<div class="description">Homogenic Album 01</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/00.PNG" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/h/02.PNG" alt="Pic1" />
+													<div class="description">Homogenic Album 02</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/02.PNG" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/h/03.PNG" alt="Pic1" />
+													<div class="description">Homogenic Album 03</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/03.PNG" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/h/04.PNG" alt="Pic1" />
+													<div class="description">Homogenic Album 04</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/04.PNG" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/h/05.PNG" alt="Pic1" />
+													<div class="description">Homogenic Album 05</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/05.PNG" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											
 										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="text">
-										<h3>Homogenic</h3>
-										<h4>Bjork, 1995</h4>
-										<ol>
-											<li>Army of Me &nbsp;(3:54)</li>
-											<li>Hyperballad &nbsp;(5:22)</li>
-											<li>It's Oh So Quiet &nbsp;(3:39)</li>
-										</ol>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
 
-		</div>
+									</div>
+								</div>
+								<div class="tab-content">
+									<div class="wrapper">
 
+										<div class="full-image"></div>
 
+										<div class="thumbnails">
 
+											<label>
+												<input type="radio" name="full-image" checked>
+												<div class="full-image">
+													<img class="big" src="./source/img/h/10.PNG" alt="Pic1" />
+													<div class="description">Music Video Still 01</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/10.PNG" alt="Pic1" width="65px" height="65px" />
+											</label>
 
-		<div class="section" id="section3">
-			<div class="layer layer3">
-				<div class="layer-container">
-					<div id="layer3_content" class="content">
-						<div class="layer-area">
-<h1>이미지 갤러리 레이아웃 고민 필요 !</h1>
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/h/11.PNG" alt="Pic1" />
+													<div class="description">Music Video Still 02</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/11.PNG" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/h/12.PNG" alt="Pic1" />
+													<div class="description">Music Video Still 03</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/12.PNG" alt="Pic1" width="65px" height="65px" />
+											</label>
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/h/13.PNG" alt="Pic1" />
+													<div class="description">Music Video Still 03</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/13.PNG" alt="Pic1" width="65px" height="65px" />
+											</label>
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/h/14.PNG" alt="Pic1" />
+													<div class="description">Music Video Still 03</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/14.PNG" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											
+
+											
+										</div>
+
+									</div>
+								</div>
+								<div class="tab-content selected">
+									<div class="wrapper">
+
+										<div class="full-image"></div>
+
+										<div class="thumbnails">
+
+											<label>
+												<input type="radio" name="full-image" checked>
+												<div class="full-image">
+													<img class="big" src="./source/img/h/bh00.jpg" alt="Pic1" />
+													<div class="description">1998's bjork 01</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/bh00.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/h/bh02.jpg" alt="Pic1" />
+													<div class="description">1998's bjork 02</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/bh02.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/h/bh03.jpg" alt="Pic1" />
+													<div class="description">1998's bjork 03</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/bh03.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/h/bh06.jpg" alt="Pic1" />
+													<div class="description">1998's bjork 04</div>
+												</div>
+												<img class="thumbnail" src="./source/img/h/bh06.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											
+										</div>
+
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 
 
@@ -216,7 +361,7 @@ Length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
 	<script type="text/javascript" src="./js/fullpage.js"></script>
 	<script type="text/javascript">
 		var myFullpage = new fullpage('#fullpage', {
-			sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+			sectionsColor: ['#ffffff', '#000', '#ffffff', '#ffffff'],
 			verticalCentered: false,
 			css3: false
 		});
@@ -299,6 +444,42 @@ Length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
 			for (var i = 0; i <= all.length; i++) {
 				all[i].style.color = "transparent";
 			}
+		}
+		
+		var $tabMenu = document.querySelector("#tab-menu");
+		var $tabMenuEl = document.querySelectorAll(".tab-a");
+		// console.log($tabMenu, $tabMenuEl);
+		var $tabContent = document.getElementsByClassName('tab-content');
+		//console.log($tabContent);
+
+		for (var i = 0; i < $tabMenuEl.length; i++) {
+			/*
+			console.log(i);
+			$tabMenuEl[i].addEventListener('click', function(event){
+			  event.preventDefault();
+			  console.log('click' + i);
+			});
+			*/
+			tabMenuClick(i);
+		}
+
+		function tabMenuClick(index) {
+			//i의 순서 체크할 수 있게 인덱스의 전달인자로 활용
+			$tabMenuEl[index].addEventListener('click', function(event) {
+				event.preventDefault();
+				//console.log(index);
+				//해당 순서를 출력
+				for (var i = 0; i < $tabMenuEl.length; i++) {
+					//모든 요소에서 셀렉티드 삭제
+					$tabMenuEl[i].classList.remove('selected');
+					$tabContent[i].classList.remove('selected');
+					if (i === index) {
+						//포문 실행 시 자신의 순서와 i 일치하나 본다 같으면 셀렉티드 추가
+						$tabMenuEl[i].classList.add('selected');
+						$tabContent[i].classList.add('selected');
+					}
+				}
+			});
 		}
 	</script>
 

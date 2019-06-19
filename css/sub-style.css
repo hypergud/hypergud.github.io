@@ -1,3 +1,49 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+/*	font: inherit;*/
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+/*	line-height: 1;*/
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 /*sub-section00*/
 
 .song-title{
@@ -6,7 +52,7 @@
 	color: rgba(248, 248, 248, 0.75);
 	margin: 40px auto 20px;
 	position: relative;
-	top: -2vh;
+	top: -1.5vh;
 	left: -1vw;
 	transform: translateY(15vh)
 	translateX(2vw)
@@ -17,18 +63,18 @@
 	color: rgba(119, 119, 119, 0.85);
 	margin: 10px 3px;
 	position: relative;
-	top: 0vh;
+	top: -0.5vh;
 	left: -0.9vw;
 	transform: translateY(14vh)
 	translateX(2vw)
 }
 
 .infos{
-	color: #777;
+	color: #797979;
 /*	font-size: 15px;*/
 	font-size: 1.6vh;
 	font-weight: 100;
-	line-height: 2.7vh;
+	line-height: 2.9vh;
 	position: relative;
 	top: 1.5vh;
 	left: -0.9vw;
@@ -54,87 +100,65 @@
             text-align: center;
         }
 
-
-
-/*LP플레이어*/
-.player-container {
-	position: absolute;
-	margin: 0 auto;
-    text-align: center;
-	left: 0;
-	right: 0;
-	margin-top: -100px;
-    margin-left: -200px;
-	margin-top: -90px;
-	margin-left: -400px;
-}
-
-.player-album {
-	position: absolute;
-	z-index: 15;
-	border-radius: 2px;
-	transform: translateX(0);
-	transition: all 0.2s ease-out;
-    
-}
-
-.player-album.active {
-	transform: translateX(-50px);
-	transition: all 0.2s ease-out;
-}
-
-.player-vinyl {
-    width: 190px;
-	position: absolute;
-	z-index: 10;
-	top: 5px;
-	left: 1065px;
-	top: 6px;
-	left: 1165px;
-	transform-origin: center middle;
-	transition: all 0.2s ease-out;
-}
-
-.player-vinyl.active {
-	position: absolute;
-	transform: translateX(50px);
-	transform-origin: center middle;
-	transition: all 0.2s ease-out;
-}
-
-.player-vinyl.playing {
-	position: absolute;
-	transform: translateX(50px);
-	transform-origin: center middle;
-	animation: playing 1.4s infinite linear;
-}
-
-.player-shadow {
-    width: 280px;
-	position: absolute;
-	z-index: 9;
-	top: 145px;
-    margin-left: -40px;
-	transform: translateX(0);
-	transition: all 0.05s ease-out;
-}
-
-.player-vinyl.active ~ .player-shadow {
-	position: absolute;
-	transform: translateX(50px);
-	transition: all 0.2s ease-out;
-}
-
-@keyframes playing {
-	0% {
-		transform: translateX(50px) rotate(0);
-	}
-	100% {
-		transform: translateX(50px) rotate(360deg);
-	}
-}
-
-.layer2 td.text{
+.small{
+	font-size: 10vh;
 	position: relative;
-	left: 900px;
+	top: 18vh;
 }
+.sec2-title{
+	font-size: 13vh;
+	font-weight: 600;
+	color: rgba(202, 203, 174, 0.76);
+}
+
+
+/*tabmenu0*/
+
+
+
+.tab-menu{
+	width:60vw;
+	margin:0 auto;
+	margin-top:50px
+}
+    .tab-menu ul{
+		display:flex
+}
+    .tab-menu li{
+		flex:1;
+		height:7vh
+}
+    .tab-menu li a{
+		position:relative;
+		display:block;
+		width:100%;
+		height:100%;
+		background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+		text-transform:uppercase;
+		text-align:center;
+		line-height:5.5vh;
+		font-size: 2.5vh;
+		font-weight: 100;
+		color: rgba(255, 255, 255, 0.5);
+}
+    .tab-menu li a.selected{
+		cursor:default;
+		background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+		color: #ffffff;
+}
+    .tab-container{
+		width:60vw;
+		margin:0 auto;
+		border:1px solid transparent;
+		box-sizing:border-box;
+		background-color: rgba(0, 0, 0, 0.42);
+}
+    .tab-container .tab-content{
+		display:none;
+		padding:30px;
+		height:65vh;
+		box-sizing:border-box
+}
+     .tab-container .tab-content.selected{
+		 display:block
+} 

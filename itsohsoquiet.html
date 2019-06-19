@@ -9,17 +9,28 @@
 	<meta name="keywords" content="fullpage,jquery,demo,simple" />
 	<meta name="Resource-type" content="Document" />
 
+<!--
 	<link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
 	<link rel="stylesheet" type="text/css" href="./css/sub-layout.css">
 	<link rel="stylesheet" href="./css/sub-style.css">
 	<link rel="stylesheet" type="text/css" href="./css/hamburger-sub.css">
+-->
+	
+	<link rel="stylesheet" type="text/css" href="./css/fullpage-bts.css" />
+	<link rel="stylesheet" type="text/css" href="./css/sub-layout.css">
+	<link rel="stylesheet" href="./css/sub-style2.css">
+	<link rel="stylesheet" type="text/css" href="./css/hamburger-sub.css">
+	<link rel="stylesheet" type="text/css" href="./css/sub-gallery.css">
 
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="./dist/css/swiper.min.css">
-
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&display=swap&subset=korean" rel="stylesheet">
 
 
 	<style>
+		body{
+			font-family: 'Noto Sans KR', sans-serif;
+		}
 		.color-test {
       flex-shrink: 2;
       text-align: center;
@@ -50,6 +61,11 @@
 		background-repeat: no-repeat;
 	}
 		
+		#section3{
+			background-image: url(source/img/02-2.png);
+		}
+		a{text-decoration:none}
+    ul{list-style-type:none}
 </style>
 
 </head>
@@ -77,28 +93,17 @@
 									<a class="sub-menu" href="hunter.html">Hunter</a>
 									<a class="sub-menu" href="paganpoetry.html">Pagan Poetry</a>
 									<a class="sub-menu" href="thegate.html">The Gate</a>
-									<!--									<a class="sub-menu" href="index.html">Main</a>-->
 								</div>
 
 								<span id="ham" style="font-size:23px; cursor:pointer;color:#848484;" onclick="openNav()">&#9776;</span>
 
-<!--
-								<div class="bottom-menu">
-									<table>
-										<tr>
-											<td>&nbsp;</td>
-											<td><img id="go-down" src="./source/img/arrow2-bottom.png" alt=""></td>
-											<td>&nbsp;</td>
-										</tr>
-									</table>
-								</div>
--->
+
 							</div>
 							
 							<div class="title">
-									<h1 class="song-title">It's Oh So Quiet</h1>
-									<h2 class="song-sub">Directed by Michel Gondry</h2>
-									<h5 class="infos">
+									<h1 class="song-title" style="color: #ffca75;">It's Oh So Quiet</h1>
+									<h2 class="song-sub" style="color: #ccccad;">Directed by Michel Gondry</h2>
+									<h5 class="infos" style="color: #cccc8f;">
 										Released&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;February 12, 1996 <br>
 										Format&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CD 12" cassette<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio Compass Point Studios(Nassau, Bahamas)<br>
 										Genre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folktronica acid house<br>
@@ -130,41 +135,28 @@
 
 		</div>
 
-		<div class="section" id="section2">
-			<div class="layer layer2">
-				<div class="layer-container">
-					<div id="layer2_content" class="content">
-						<div class="layer-area">
-							<table>
-								<tr>
-									<td colspan="1">
-										<div class="player-container" onclick="play()">
-											<audio data-keepplaying id="audio_play" src="./source/music/hpb.mp3"></audio>
-											<img class="player-item player-album" src="./source/img/post.jpg" alt="album-cover" width="205px" />
-											<img class="player-item player-vinyl" src="http://katehummer.com/resources/vinyl-player/vinyl-alt.png" alt="vinyl" />
-											<img class="player-item player-shadow" src="http://katehummer.com/resources/vinyl-player/vinyl-shadow.png" alt="vinyl-shadow" />
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="text">
-										<h3>Post</h3>
-										<h4>Bjork, 1995</h4>
-										<ol>
-											<li>Army of Me &nbsp;(3:54)</li>
-											<li>Hyperballad &nbsp;(5:22)</li>
-											<li>It's Oh So Quiet &nbsp;(3:39)</li>
-										</ol>
-									</td>
-								</tr>
-							</table>
+
+
+<div class="section" id="section2">
+			<div class="slide" id="slide1">
+				<div class="layer layer2">
+					<div class="layer-container">
+						<div class="layer2_content content">
+							<div class="layer-area">
+								<h1 class="sec2-title">
+									<div class="small">
+										Original .1951
+									</div><br>by Betty Hutton
+								</h1>
+								<div id="original">
+									<audio controls data-keepplaying id="audio_play" src="./source/music/origin.mp3"></audio>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</div>
-
 
 
 
@@ -173,14 +165,197 @@
 				<div class="layer-container">
 					<div id="layer3_content" class="content">
 						<div class="layer-area">
-							<h1>이미지 갤러리 레이아웃 고민 필요 !</h1>
+							<div id="tab-menu" class="tab-menu">
+								<ul>
+									<li><a href="#" class=" tab-a">Album art</a></li>
+									<li><a class="tab-a" href="#">Music Video Still Photo</a></li>
+									<li><a class="tab-a selected" href="#">1995's bjork</a></li>
+								</ul>
+							</div>
+							<div class="tab-container">
+								<div class="tab-content">
+<!--									<h2>Click on a thumbnail image</h2>-->
+									<div class="wrapper">
+
+										<div class="full-image"></div>
+
+										<div class="thumbnails">
+
+											<label>
+												<input type="radio" name="full-image" checked>
+												<div class="full-image">
+													<img class="big" src="./source/img/its/02.PNG" alt="Pic1" />
+													<div class="description">Post Album 01</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/02.PNG" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/e7bcd6ac39a644bab89be3f3adffd58d.jpg" alt="Pic1" />
+													<div class="description">Post Album 02</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/e7bcd6ac39a644bab89be3f3adffd58d.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/R-28720-1145141063.jpeg.jpg" alt="Pic1" />
+													<div class="description">Post Album 03</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/R-28720-1145141063.jpeg.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/tumblr_pf4pgtc9AH1qf77soo1_500.jpg" alt="Pic1" />
+													<div class="description">Post Album 04</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/tumblr_pf4pgtc9AH1qf77soo1_500.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											
+
+											
+										</div>
+
+									</div>
+								</div>
+								<div class="tab-content">
+									<div class="wrapper">
+
+										<div class="full-image"></div>
+
+										<div class="thumbnails">
+
+											<label>
+												<input type="radio" name="full-image" checked>
+												<div class="full-image">
+													<img class="big" src="./source/img/its/10.png" alt="Pic1" />
+													<div class="description">Music Video Still 01</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/10.png" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/11.png" alt="Pic1" />
+													<div class="description">Music Video Still 02</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/11.png" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/12.png" alt="Pic1" />
+													<div class="description">Music Video Still 03</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/12.png" alt="Pic1" width="65px" height="65px" />
+											</label>
+											
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/13.png" alt="Pic1" />
+													<div class="description">Music Video Still 04</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/13.png" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/14.png" alt="Pic1" />
+													<div class="description">Music Video Still 05</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/14.png" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											
+
+											
+										</div>
+
+									</div>
+								</div>
+								<div class="tab-content selected">
+									<div class="wrapper">
+
+										<div class="full-image"></div>
+
+										<div class="thumbnails">
+
+											<label>
+												<input type="radio" name="full-image" checked>
+												<div class="full-image">
+													<img class="big" src="./source/img/its/bpost2.jpg" alt="Pic1" />
+													<div class="description">1995's bjork 01</div>
+												</div>
+												<img class="thumbnail" src="../source/img/its/bpost2.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/bpost3.jpg" alt="Pic1" />
+													<div class="description">1995's bjork 02</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/bpost3.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/bpost4.jpg" alt="Pic1" />
+													<div class="description">1995's bjork 03</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/bpost4.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/bpost5.jpg" alt="Pic1" />
+													<div class="description">1995's bjork 04</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/bpost5.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/bpost5.jpg" alt="Pic1" />
+													<div class="description">1995's bjork 05</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/bpost5.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+											
+											<label>
+												<input type="radio" name="full-image">
+												<div class="full-image">
+													<img class="big" src="./source/img/its/bpost6.jpg" alt="Pic1" />
+													<div class="description">1995's bjork 06</div>
+												</div>
+												<img class="thumbnail" src="./source/img/its/bpost6.jpg" alt="Pic1" width="65px" height="65px" />
+											</label>
+
+											
+										</div>
+
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 
 
 	<div id="cursor-dot">&nbsp;</div>
@@ -216,7 +391,7 @@
 	<script type="text/javascript" src="./js/fullpage.js"></script>
 	<script type="text/javascript">
 		var myFullpage = new fullpage('#fullpage', {
-			sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+			sectionsColor: ['#ffffff', '#000', '#ffffff', '#ffffff'],
 			verticalCentered: false,
 			css3: false
 		});
@@ -298,6 +473,42 @@
 			for (var i = 0; i <= all.length; i++) {
 				all[i].style.color = "transparent";
 			}
+		}
+		
+		var $tabMenu = document.querySelector("#tab-menu");
+		var $tabMenuEl = document.querySelectorAll(".tab-a");
+		// console.log($tabMenu, $tabMenuEl);
+		var $tabContent = document.getElementsByClassName('tab-content');
+		//console.log($tabContent);
+
+		for (var i = 0; i < $tabMenuEl.length; i++) {
+			/*
+			console.log(i);
+			$tabMenuEl[i].addEventListener('click', function(event){
+			  event.preventDefault();
+			  console.log('click' + i);
+			});
+			*/
+			tabMenuClick(i);
+		}
+
+		function tabMenuClick(index) {
+			//i의 순서 체크할 수 있게 인덱스의 전달인자로 활용
+			$tabMenuEl[index].addEventListener('click', function(event) {
+				event.preventDefault();
+				//console.log(index);
+				//해당 순서를 출력
+				for (var i = 0; i < $tabMenuEl.length; i++) {
+					//모든 요소에서 셀렉티드 삭제
+					$tabMenuEl[i].classList.remove('selected');
+					$tabContent[i].classList.remove('selected');
+					if (i === index) {
+						//포문 실행 시 자신의 순서와 i 일치하나 본다 같으면 셀렉티드 추가
+						$tabMenuEl[i].classList.add('selected');
+						$tabContent[i].classList.add('selected');
+					}
+				}
+			});
 		}
 	</script>
 

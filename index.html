@@ -17,11 +17,15 @@
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="./dist/css/swiper.min.css">
 
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&display=swap&subset=korean" rel="stylesheet">
 
 
 
 	<style>
 		body{
+			
+			font-family: '맑은 고딕';
+			font-family: 'Noto Sans KR';
 			cursor: none;
 /*			따라오는 친구 설정해두고 커서 없게 하면 얼추 느낌*/
 		}
@@ -88,18 +92,6 @@
    		ul{list-style-type:none}
 		
 		
-		
-		
-		
-		#section0,#section1,#section2,#section3{
-		background-size: cover;
-		background-attachment: fixed;
-	}
-		
-		#section3{
-		background-color: transparent;
-	}
-		
     </style>
 </head>
 
@@ -122,24 +114,10 @@
 						<div class="layer-area">
 							<div class="header">
 
-
-								<!--
-								<div class="bottom-menu">
-									<table>
-										<tr>
-											<td>&nbsp;</td>
-											<td>
-												<img id="go-down" src="./source/img/arrow2-bottom.png" alt="">
-											</td>
-											<td>&nbsp;</td>
-										</tr>
-									</table>
-								</div>
--->
 								<div id="mySidenav" class="sidenav">
 									<a href="javascript:void(0)" id="close" class="closebtn" onclick="closeNav()">&times;</a>
-									<a id="sub--menu" class="sub-menu" href="bigtimesensuality.html">Big Time Sensuality</a>
-									<a class="sub-menu" href="hyperballad.html">It's Oh So Quiet</a>
+									<a class="sub-menu" href="bigtimesensuality.html">Big Time Sensuality</a>
+									<a class="sub-menu" href="itsohsoquiet.html">It's Oh So Quiet</a>
 									<a class="sub-menu" href="hunter.html">Hunter</a>
 									<a class="sub-menu" href="paganpoetry.html">Pagan Poetry</a>
 									<a class="sub-menu" href="thegate.html">The Gate</a>
@@ -147,7 +125,9 @@
 								</div>
 
 								<span id="ham" style="font-size:23px; cursor:pointer;color:#848484;" onclick="openNav()">&#9776;</span>
+
 							</div>
+							
 
 							<div class="logo">
 								<a href="index.html">
@@ -210,9 +190,10 @@
 
 		<div class="clear"></div>
 
-		<div class="section" id="section2" style="width: 80%; overflow: hidden;margin: 0 auto">
+		<div class="section" id="section2">
+		<h1 id="test2">Björk&apos;s <br>discography</h1>
 			<!-- Swiper -->
-			<div id="test">
+			<div id="test" style="width: 80%; overflow: hidden;margin: 0 auto">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<div id="sw1" class="swiper-slide" style="background-image:url(./source/img/debut.jpg); background-size: 300px;background-repeat: no-repeat; width: 300px">
@@ -221,7 +202,7 @@
 						<div id="sw2" class="swiper-slide" style="background-image:url(./source/img/post.jpg); background-size: 300px;background-repeat: no-repeat; width: 300px">
 							<a href="playpost.html">Post</a>
 						</div>
-						<div class="swiper-slide" style="background-image:url(./source/img/homogenic.jpg); background-size: 300px;background-repeat: no-repeat; width: 300px"><a href="playhomogenic.html">Homogneic</a></div>
+						<div class="swiper-slide" style="background-image:url(./source/img/homogenic.jpg); background-size: 300px;background-repeat: no-repeat; width: 300px"><a href="playhomogenic.html">Homogenic</a></div>
 						<div class="swiper-slide" style="background-image:url(./source/img/vespertine.jpg); background-size: 300px;background-repeat: no-repeat; width: 300px"><a href="./pin_layout03.html">Vespertine</a></div>
 						<div class="swiper-slide" style="background-image:url(./source/img/utopia.jpg); background-size: 300px;background-repeat: no-repeat; width: 300px"><a href="./pin_layout04.html">Utopia</a></div>
 					</div>
@@ -260,7 +241,19 @@
 							<video id="myVideo2" data-keepplaying loop muted autoplay>
 								<source src="./source/video/main3.mp4" type="video/mp4">
 							</video>
-							<div id="niceto">Nice to meet you, Bjork!</div>
+							<div class="sns">Follow our lovely Bjork . <br>
+							<a href="https://twitter.com/bjork"><img class="twi" src="./source/img/twitter_PNG15.png" alt=""></a><br><a href="https://www.instagram.com/bjork/"><img class="twi" src="./source/img/insta.png" alt=""></a>
+							<br><a href="https://www.youtube.com/user/bjorkdotcom"><img class="twi" src="./source/img/youtube.png" alt=""></a>
+							</div>
+							
+							<div class="links"></div>
+							<div id="niceto">Nice to see you, Bjork!</div>
+							<h5 id="niceto-comment">그녀의 멋진 음악을 멋진 뮤직비디오로 소개합니다.<br>이번 방문이 비요크를 사랑하는 시작이 되길 바랍니다 . . <br>
+							이제는 Nice to see you,  Bjork !</h5>
+							
+							<hr>
+							
+							<h5 class="footer">Designed and Developed by Hypergud<div class="copyright">&copy; 2019 Bjork All Rights Reserved.</div></h5>
 
 						</div>
 
@@ -357,32 +350,9 @@
 			}
 		});
 
-		//        var $slide = document.getElementsByClassName("swiper-slide");
-		//        for(var i=0; i<$slide.length; i++){
-		//			if($slide[i].style.zIndex == 1){
-		//            console.log("dff");
-		//        }else{
-		//			console.log("Dd");
-		//		};
-		//		};
-		//        
-		//		
-		//		for(var i)
-		//		if(document.getElementById("sw1").style.zIndex == 1){
-		//			console.log("d");
-		//		}
 	</script>
 
-	<!--
-  <script>
-    var swiper = new Swiper('.swiper-slide', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
--->
+
 
 	<script type="text/javascript">
 		function openNav() {

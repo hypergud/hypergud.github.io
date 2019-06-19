@@ -17,7 +17,7 @@
 	transform: translateX(0);
 	transition: all 0.2s ease-out;
     width:330px;
-	left: 12vw;
+	left: 11vw;
 }
 
 .player-album.active {
@@ -34,7 +34,7 @@
 /*	left: 1165px;*/
 	transform-origin: center middle;
 	transition: all 0.2s ease-out;
-	left: 12vw;
+	left: 11vw;
 }
 
 .player-vinyl.active {
@@ -57,7 +57,7 @@
 	position: absolute;
 	z-index: 9;
 	top: 240px;
-	left: 11vw;
+	left: 10vw;
     margin-left: -40px;
 	transform: translateX(0);
 	transition: all 0.2s ease-out;
@@ -81,7 +81,7 @@
 .album-info{
 	position: relative;
 	top: 53vh;
-	left: 11.5vw;
+	left: 10.5vw;
 }
 
 .title{
@@ -106,7 +106,7 @@
 .track{
 /*	background-color: violet;*/
 	position: relative;
-	top: -19vh;
+	top: -20vh;
 	left:45vw;
 	width: 61%;
 }

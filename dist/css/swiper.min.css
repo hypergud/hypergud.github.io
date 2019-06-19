@@ -128,8 +128,8 @@
 .swiper-container-3d .swiper-slide-shadow-right,
 .swiper-container-3d .swiper-slide-shadow-top {
     position: absolute;
-    left: 1.5vw;
-    top: 9.5vh;
+    left: 0.8vw;
+    top: 7.8vh;
     width: 300px;
     height: 300px;
     pointer-events: none;

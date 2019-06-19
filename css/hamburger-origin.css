@@ -1,5 +1,5 @@
 /*햄버거 메뉴*/
-.header {
+.header{
 	width: 100%;
 	z-index: 9999;
 	position: fixed;
@@ -20,16 +20,17 @@
 	display: block;
 }
 
+
 /*모든 글자들*/
 .sidenav a {
 	padding: 8px 8px 8px 40px;
 	text-decoration: none;
 	font-size: 15px;
-	font-weight: 400;
+	font-weight: 300;
 	color: #777;
 	display: block;
 	transition: 0.3s;
-	font-family: 'Noto Sans KR', sans-serif;
+/*	font-family: 'Noto Sans KR', sans-serif;*/
 	overflow-x: hidden;
 }
 
@@ -52,6 +53,7 @@ a.sub-menu {
 	font-size: 4.15vh;
 	margin-left: -1.45vw;
 	margin-top: 1.2vh;
+	overflow: hidden;
 }
 
 /*원래 햄버거*/
