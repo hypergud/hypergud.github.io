@@ -191,7 +191,9 @@ html.fp-enabled,
     border: 0;
     background-color: #717171;
     left: 50%;
-    top: 50%;
+	left: 0.2vw;
+    top: -40vh;
+	top: 42vh;
     margin: -2px 0 0 -2px;
 }
 
@@ -204,14 +206,17 @@ html.fp-enabled,
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;
-    top: 1px;
+    top: -41vh;
+	top: 41.1vh;
+	left: -12vw;
 /*	top: 500px;*/
     color: #f5419c;
-    font-size: 14px;
+    font-size: 14.3px;
 	font-weight: 400;
+	text-align: right;
     white-space: nowrap;
     max-width: 220px;
-    overflow: hidden;
+/*    overflow: hidden;*/
     display: block;
     opacity: 0;
     width: 0;

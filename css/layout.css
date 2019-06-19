@@ -46,7 +46,7 @@
         
         
         /*    메인 자동재생 동영상*/
-	#myVideo{
+	#myVideo, #myVideo2{
 		position: absolute;
 		right: 0;
 		bottom: 0;
@@ -133,41 +133,87 @@
 
 .layer1-column{
     position: relative;
+	left: vw;
     width: 100%;
-    height: 50%;
+    height:50%;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 30px;
 }
-
+.notice{
+	position: absolute;
+	top: -5vh;
+	left: 38vw;
+	color: #8b8b8b;
+	font-size: 15px;
+	font-weight: 6500;
+	-webkit-animation:blink 1.5s ease-in-out infinite alternate;
+        -moz-animation:blink 1.5s ease-in-out infinite alternate;
+        animation:blink 1.5s ease-in-out infinite alternate;
+}
 .layer1-left{
 	position: relative;
 	width: 45%;
 	height:70vh;
     float: left;
-	background-color: rgba(238, 130, 238, 0.26);
-	padding: 2%;
+/*	background-color: rgba(238, 130, 238, 0.26);*/
+	padding: 2.5%;
+	left: 2vw;
 }
-.layer1-left h1{
-	font-size: 30px;
-	font-weight: 500;
+.layer1-left a{
+	font-size:30px;
+	font-weight: 400;
 	position: relative;
-	top: 45%;
+	top: 30vh;
+	color: #000;
+}
+.layer1-left a:hover{
+	cursor: grab;
+	color: #ff2291;
+	z-index: 100;
+}
+.layer1-text{
+	position: relative;
+	top: 34vh;
+	font-size:1.6vh;
+	font-weight: 100;
+	line-height: 3.2vh;
+}
+.sugar{
+	position: absolute;
+	left: 70px;
+	display: none;
+	z-index: 5;
 }
 .layer1-right{
 	position: relative;
 	width: 45%;
 	height:70vh;
     float: left;
-	background-color: rgba(0, 0, 255, 0.15);
-	padding: 2%;
+/*	background-color: rgba(0, 0, 255, 0.15);*/
+	padding: 2.5%;
+	right: 2vw;
 }
-.layer1-right h1{
+.layer1-right a{
 	font-size: 30px;
-	font-weight: 500;
+	font-weight: 400;
 	position: relative;
-	top: 45%;
+	top: 30vh;
+	color: #000;
 }
+
+.layer1-right a:hover{
+	cursor: grab;
+	color: #ff2291;
+	z-index: 100;
+}
+.debut{
+	position: absolute;
+	left: 70px;
+	display: none;
+	z-index: 5;
+}
+
+
 .clear{
 	clear: both;
 }
@@ -177,46 +223,75 @@
             width: 70vw;
             height: 50vh;
             margin: 150px auto;
-/*			text-align: center;*/
             padding-top: 50px;
-/*            padding-bottom: 100px;*/
-			overflow:hidden
+/*			overflow-x:auto;*/
+			top: -3vh;
         }
 
         .swiper-slide {
             background-position: center;
             background-size: cover;
-            width: 300px;
-            height: 300px;
         }
 
         .swiper-slide a {
-            font-size: 30px;
-            font-weight: 600;
+            font-size: 27px;
+            font-weight: 100;
             position: relative;
-            top: 105%;
+            top: 46vh;
+			left: -0.1vw;
             text-align: center;
             display: block;
             color: black;
 /*            background-color: violet;*/
             text-decoration: none;
+/*			display: none;*/
         }
         
         td#album{visibility: hidden;}
 
+#hide{
+	width: 35vw;
+	height: 14vh;
+	background-color: violet;
+	background-color: #fff;
+	position: absolute;
+	top: 63vh;
+	left: -3vw;
+	z-index: 9999;
+	
+}
 
+#hide2{
+	width: 35vw;
+	height: 14vh;
+	background-color: violet;
+	background-color: #fff;
+	position: absolute;
+	top: 63vh;
+	right: -3vw;
+	z-index: 9999;
+	
+}
 
 /*레이어마지막*/
 
-*{margin:0;padding:0}
-    body{font-family:'Roboto', sans-serif}
-    a{text-decoration:none}
-    ul{list-style-type:none}
-    .tab-menu{width:800px;margin:0 auto;margin-top:50px}
-    .tab-menu ul{display:flex}
-    .tab-menu li{flex:1;height:50px}
-    .tab-menu li a{position:relative;display:block;width:100%;height:100%;background-color:#999;text-transform:uppercase;text-align:center;color:#fff;line-height:50px}
-    .tab-menu li a.selected{background-color:#000;cursor:default}
-    .tab-container{width:800px;margin:0 auto;border:1px solid #000;box-sizing:border-box}
-    .tab-container .tab-content{display:none;padding:30px;height:450px;box-sizing:border-box}
-.tab-container .tab-content.selected{display:block}
+.overlay {
+/*  display: none;*/
+  z-index: 1000;
+  position: fixed;
+  width: 100vw; height: 100vh;
+  left: 0; top: 300vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+
+#niceto{
+	position: relative;
+	top: 61vh;
+	left: 3vw;
+	font-size: 10vh;
+	font-weight: 600;
+	color: rgba(219, 219, 219, 0.5);
+	z-index: 1001;
+}

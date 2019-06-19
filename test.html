@@ -3,102 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<style>
-		@import url(https://fonts.googleapis.com/css?family=Raleway:500,900);
-
-		figure.snip1432 {
-			font-family: 'Raleway', Arial, sans-serif;
-			color: #000000;
-			position: relative;
-			overflow: hidden;
-			margin: 10px;
-			min-width: 230px;
-			max-width: 315px;
-			width: 100%;
-			background: #ff5656;
-			color: #000000;
-			text-align: left;
-		}
-
-		figure.snip1432 * {
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-			-webkit-transition: all 0.6s ease;
-			transition: all 0.6s ease;
-		}
-
-		figure.snip1432 figcaption {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
-
-		figure.snip1432 figcaption>div {
-			height: 50%;
-			overflow: hidden;
-			width: 100%;
-			position: relative;
-		}
-
-		figure.snip1432 h3 {
-			margin: 0;
-			position: absolute;
-			left: 0;
-			padding: 0 30px;
-			text-transform: uppercase;
-		}
-
-
-		figure.snip1432 h3 {
-			font-size: 1em;
-			bottom: 0;
-			font-weight: 500;
-		}
-
-		figure.snip1432 h3:nth-of-type(2) {
-			opacity: 0;
-			-webkit-transform: translateY(150%);
-			transform: translateY(150%);
-		}
-
-
-		figure.snip1432:hover figcaption h3:first-of-type,
-		figure.snip1432.hover figcaption h3:first-of-type {
-			-webkit-transform: translateY(150%);
-			transform: translateY(150%);
-			opacity: 0;
-		}
-
-		figure.snip1432:hover figcaption h3:nth-of-type(2),
-		figure.snip1432.hover figcaption h3:nth-of-type(2) {
-			opacity: 1;
-			-webkit-transform: translateY(0%);
-			transform: translateY(0%);
-		}
-	</style>
+	
 </head>
 
 <body>
-	<figure class="snip1432">
-		<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample36.jpg" alt="sample36" />
-		<figcaption>
-			<div>
-				<h3 style="font-size: 30px">bjork</h3>
-				<h3>nice to <br>meet you</h3>
-			</div>
-		</figcaption>
-	</figure>
 	<script>
-		/* Demo purposes only */
-		$(".hover").mouseleave(
-			function() {
-				$(this).removeClass("hover");
-			}
-		);
-
-		Resources
-	</script>
+function view(opt) {
+  if(opt) {
+     spec1.style.display = "block";
+  }
+  else {
+     spec1.style.display = "none";
+  }
+}
+</script>
+<div style="float:left; width:181px; height:28px; line-height:28px; font-size:0.9em; color:#ffffff; background:#909090; text-align:center;" onmouseover="view(true)" onmouseout="view(false)">
+    정보제공사항 자세히보기
+</div>
+<div id="spec1" style="position:relative; z-index:1; left:0px; top:0px;display:none">
+    <div style="position:absolute; width:300px; height:314px; left:360px; top:30px; z-index:1; background:#ffffff; border:1px solid #909090; font-size:0.9em; line-height:1.5em; padding:10px 10px;">
+        <div style="">
+            <strong>수집하는 개인정보</strong><br>
+            회사는 고객상담, 문의 및 불만 해소를 위해 아래와 <br>
+            같은 개인정보를 수집합니다. 서비스 신청 등등을 <br>
+            위해 아래와 같은 개인정보를 수집하고 있습니다.<br>
+            &nbsp;- 수집항목 : 이름 , 전화번호 , 이메일<br>
+            &nbsp;- 수집방법 : 홈페이지 온라인상담 게시판을 통해 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            이용자가 자발적으로 기입
+        </div>
+        <div style="padding:6px 0;">
+            <strong>개인정보의 수집 및 이용목적</strong><br>
+            회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br>
+            &nbsp;- 고객 문의응답, 불만처리 등
+        </div>
+        <div style="">
+            <strong>개인정보의 보유 및 이용기간</strong><br>
+            개인정보수집 및 이용목적 달성 이후 즉시 파기를<br>
+            원칙으로 합니다.
+        </div>
+    </div>
+</div>
 </body>
 </html>

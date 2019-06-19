@@ -17,7 +17,7 @@
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="./dist/css/swiper.min.css">
 
-	
+
 
 
 	<style>
@@ -88,12 +88,17 @@
    		ul{list-style-type:none}
 		
 		
-			
+		
+		
+		
 		#section0,#section1,#section2,#section3{
 		background-size: cover;
 		background-attachment: fixed;
 	}
-        
+		
+		#section3{
+		background-color: transparent;
+	}
 		
     </style>
 </head>
@@ -105,12 +110,11 @@
 
 		<!--       section 0 : Main-->
 
-		<div class="section " id="section0" data-anchor="section00">
+		<div class="section" id="section0" data-anchor="section00">
 			<!--                       background video-->
 			<video id="myVideo" data-keepplaying loop muted data-autoplay>
 				<source src="./source/video/main3.mp4" type="video/mp4">
 			</video>
-
 
 			<div class="layer layer0">
 				<div class="layer-container">
@@ -148,7 +152,6 @@
 							<div class="logo">
 								<a href="index.html">
 									<h1 class="logo">Björk</h1>
-									<!--										<h1 class="logo">Bjork</h1>-->
 								</a>
 							</div>
 						</div>
@@ -166,14 +169,39 @@
 			<div class="layer layer1">
 				<div class="layer-container">
 					<div id="layer1_content" class="content">
-						<div class="layer-area" style="text-align: center">
-							<!--                       one column-->
-							<div class="layer1-column layer1-left">
-								<h1>SugarCubes</h1>
+						<div class="layer-area layer1-column" style="text-align: center">
+							<div class="notice">
+								키워드에 마우스를 올려보세요
 							</div>
+							<!--                       one column-->
+							<div class=" layer1-left">
+
+								<div id="spec1" class="sugar">
+									<img src="./source/img/Sugarcubes.jpg" alt="" width="650px">
+								</div>
+
+
+								<a onmouseover="view(true)" onmouseout="view(false)" id="key1" href="#">SugarCubes</a>
+								<h3 class="layer1-text">슈가큐브스는 아이슬란드의 얼터네이티브 록 밴드이다. <br>1986년부터 1992년까지 활동했다. <br>비요크는 슈가큐브스의 메인보컬, 키보드로 활동했다.</h3>
+							</div>
+
+							<!--
 							<div class="layer1-column layer1-right">
 								<h1>Solo Debut</h1>
 							</div>
+-->
+							<div class="layer1-right">
+
+								<div id="spec2" class="debut">
+									<img src="./source/img/layer1.jpg" alt="" width="650px">
+								</div>
+
+
+								<a onmouseover="view2(true)" onmouseout="view2(false)" href="#">2nd Debut</a>
+								<h3 class="layer1-text">비요크가 음악 시장에서 데뷔한 것은 11세때였지만 <br> 슈가큐브스 해체 이후 새롭게 시작하는 마음을 담아 <br>1993년, 솔로 앨범 'Debut'을 발매했다. <br>
+								</h3>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -182,27 +210,36 @@
 
 		<div class="clear"></div>
 
-		<div class="section" id="section2">
+		<div class="section" id="section2" style="width: 80%; overflow: hidden;margin: 0 auto">
+			<!-- Swiper -->
+			<div id="test">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div id="sw1" class="swiper-slide" style="background-image:url(./source/img/debut.jpg); background-size: 300px;background-repeat: no-repeat; width: 300px">
+							<a id="sw1-a" class="" href="playdebut.html">Debut</a>
+						</div>
+						<div id="sw2" class="swiper-slide" style="background-image:url(./source/img/post.jpg); background-size: 300px;background-repeat: no-repeat; width: 300px">
+							<a href="playpost.html">Post</a>
+						</div>
+						<div class="swiper-slide" style="background-image:url(./source/img/homogenic.jpg); background-size: 300px;background-repeat: no-repeat; width: 300px"><a href="playhomogenic.html">Homogneic</a></div>
+						<div class="swiper-slide" style="background-image:url(./source/img/vespertine.jpg); background-size: 300px;background-repeat: no-repeat; width: 300px"><a href="./pin_layout03.html">Vespertine</a></div>
+						<div class="swiper-slide" style="background-image:url(./source/img/utopia.jpg); background-size: 300px;background-repeat: no-repeat; width: 300px"><a href="./pin_layout04.html">Utopia</a></div>
+					</div>
 
-			<div class="swiper-container" style="margin-top: 200px;">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide" style="background-image:url(./source/img/debut.jpg)">
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+					<!-- Add Arrows -->
 
-					</div>
-					<div class="swiper-slide" style="background-image:url(./source/img/post.jpg)">
-						<!--                                        <a class="slide-text" href="hyperballad.html">More</a>-->
-					</div>
-					<div class="swiper-slide" style="background-image:url(./source/img/homogenic.jpg)">
-						<!--                                    <a class="slide-text" href="./pin_layout02.html">More</a>-->
-					</div>
-					<div class="swiper-slide" style="background-image:url(./source/img/vespertine.jpg)">
-						<!--                                    <a class="slide-text" href="./pin_layout03.html">More</a>-->
-					</div>
-					<div class="swiper-slide" style="background-image:url(./source/img/utopia.jpg)">
-						<!--                                    <a class="slide-text" href="./pin_layout04.html">More</a>-->
-					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+
 				</div>
 			</div>
+			<div id="hide">
+			</div>
+			<div id="hide2">
+			</div>
+
 
 		</div>
 
@@ -210,24 +247,53 @@
 
 
 		<div class="section" id="section3">
+
 			<div class="layer layer3">
+
 				<div class="layer-container">
+
 					<div id="layer3_content" class="content">
+
 						<div class="layer-area">
-							
+							<div class="overlay"></div>
+							<!--                       background video-->
+							<video id="myVideo2" data-keepplaying loop muted autoplay>
+								<source src="./source/video/main3.mp4" type="video/mp4">
+							</video>
+							<div id="niceto">Nice to meet you, Bjork!</div>
 
 						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
+
 	</div>
-
-
 
 	<div id="cursor-dot">&nbsp;</div>
 	<script src="./vendor/gsap/TweenMax.min.js" type="text/javascript"></script>
 	<script src="./js/script.js" type="text/javascript"></script>
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	<script>
+		function view(opt) {
+			if (opt) {
+				document.getElementById("spec1").style.display = "block";
+			} else {
+				document.getElementById("spec1").style.display = "none";
+			}
+		};
+
+		function view2(opt) {
+			if (opt) {
+				document.getElementById("spec2").style.display = "block";
+
+			} else {
+				document.getElementById("spec2").style.display = "none";
+			}
+		};
+	</script>
 
 
 	<script type="text/javascript" src="./js/fullpage.js"></script>
@@ -235,11 +301,13 @@
 		var myFullpage = new fullpage('#fullpage', {
 			sectionsColor: ['#ffffff'],
 			navigation: true,
-			navigationTooltips: ['Main', 'About Bjork', 'Björk&apos;s Amazing Works', 'Credits+Comment'],
+			navigationTooltips: ['Main', 'About Bjork', 'Björk&apos;s Discography', 'Credits+Comment'],
 			showActiveTooltip: true,
 			menu: '#menu'
+
 		});
 	</script>
+
 
 	<!-- Swiper JS -->
 	<script src="./dist/js/swiper.min.js"></script>
@@ -247,16 +315,21 @@
 	<!-- Initialize Swiper -->
 	<script>
 		var swiper = new Swiper('.swiper-container', {
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
 			effect: 'coverflow',
-			grabCursor: true,
+			grabCursor: false,
+
 			centeredSlides: true,
 			slidesPerView: 3,
 			initialSlide: 0,
 			coverflowEffect: {
-				rotate: -15,
+				rotate: 40,
 				loop: true,
 				stretch: 0,
-				depth: 350,
+				depth: 105,
 				modifier: 1,
 				slideShadows: true,
 			},
@@ -269,8 +342,8 @@
 			centeredSlides: true,
 			slidesPerView: 3,
 			initialSlide: 0,
-			keyboardControl: true,
-			mousewheelControl: true,
+			keyboardControl: false,
+			mousewheelControl: false,
 			lazyLoading: true,
 			preventClicks: false,
 			preventClicksPropagation: false,
@@ -284,13 +357,32 @@
 			}
 		});
 
-		var $slide = document.getElementsByClassName(".swiper-slide");
-
-		if ($slide.zIndex !== 1) {
-			var $a = document.getElementsByTagName("a");
-			//            $a.remove();
-		}
+		//        var $slide = document.getElementsByClassName("swiper-slide");
+		//        for(var i=0; i<$slide.length; i++){
+		//			if($slide[i].style.zIndex == 1){
+		//            console.log("dff");
+		//        }else{
+		//			console.log("Dd");
+		//		};
+		//		};
+		//        
+		//		
+		//		for(var i)
+		//		if(document.getElementById("sw1").style.zIndex == 1){
+		//			console.log("d");
+		//		}
 	</script>
+
+	<!--
+  <script>
+    var swiper = new Swiper('.swiper-slide', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+-->
 
 	<script type="text/javascript">
 		function openNav() {
