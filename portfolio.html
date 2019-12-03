@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<title>Portfolio_Index</title>
+	<style>
+
+		* {
+	margin: 0;
+	padding: 0;
+	font-family: Gothic A1;
+}
+
+/*
+::-webkit-scrollbar{width: 10px;}
+::-webkit-scrollbar-track{background-color: black;}
+::-webkit-scrollbar-thumb{background-color: #6315b2;border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover{background-color: #9933ff;}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment{width: 10px;height: 10px;background-color: #9933ff;border-radius: 10px;}
+*/
+
+::-webkit-scrollbar {
+	width: 10px;
+	display: none
+}
+
+::-webkit-scrollbar-track {
+	background-color: black;
+}
+
+/*
+::-webkit-scrollbar-thumb{background-color: #6315b2;border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover{background-color: #9933ff;}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment{width: 10px;height: 10px;background-color: #9933ff;border-radius: 10px;}
+*/
+
+
+
+a {
+	color: #fff;
+	text-decoration: none
+}
+
+header {
+	overflow: hidden;
+	/*			display: -webkit-flex; */
+	/*			display: flex;*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	/*			background-color: violet;*/
+	/*			justify-content: space-between;*/
+	/*			align-items: center*/
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	z-index: 1000;
+}
+
+
+header nav,
+header nav ul {
+	margin: 12px;
+	margin-top: 15px;
+	width: 98.05%;
+	height: 95%;
+}
+nav ul {
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+	list-style: none;
+}
+
+
+
+.logo_img {
+	width: 7vh;
+}
+		
+.logo_img02 {
+	width: 2.7vh;
+}
+@keyframes left_rotate{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(90deg);}
+}
+@keyframes right_rotate{
+	from{}
+	to{}
+}
+.logo_img02.left_02{
+	padding-right: 10px;
+	animation-name: left_rotate;
+	animation-delay: 2s;
+}
+.logo_img02.right_02{
+	padding-left: 10px;
+	transform: rotate(90deg) translateX(-5.5px);
+	animation-name: right_rotate;
+}
+
+
+		
+		
+		/* vw vh - 브라우저 사이즈의 width, height - view width, view height 의 비율 */
+/* main{padding-top:80px} */
+.section {
+	display: block;
+	width: 100%;
+	height: 100vh;
+	min-height: 800px;
+	color: #fff;
+/*	background-color: lightblue;*/
+}
+
+/* .section{display:block;width:100%;height:calc(100vh - 80px);min-height:800px;color:#fff} */
+.section .section-area {
+	width: 1024px;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 40px;
+	padding-left: 40px;
+	box-sizing: border-box
+}
+
+/* .section:nth-child(1) .section-area{padding-top:80px} */
+/* .section:nth-child(1){height:calc(100vh - 80px)} */
+.section .section-area .area-flex {
+	display: flex;
+	width: 100%;
+	height: 100%;
+/*	flex-direction: column;*/
+	justify-content: center;
+	align-items: center
+}
+
+.section .section-area .area-flex b {
+	font-size: 100px;
+	font-weight: 700;
+	line-height: 120px
+}
+
+#section0 {
+	background-color: #000
+}
+
+
+
+
+
+body {
+	/*	overflow-x: hidden;*/
+	overflow-x: visible;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+}
+
+.wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+
+.particule {
+	position: fixed;
+	z-index: 0;
+}
+		
+#section0{
+	display: flex;
+}
+
+#section0 .menu{
+	position: absolute;
+	left: 300px;
+	float: left;
+	width: 700px;
+	height: 500px;
+	margin-top: 10px;
+	margin-right: 300px;
+	z-index: 6000;
+
+}
+/* #section0 .menu ul{
+	animation-delay: 
+} */
+
+/* #section0 .menu .fields{
+
+} */
+
+#section0 .menu .fields li{
+	margin: 20px 20px;
+	list-style-type: none;
+	font-size: 35px;
+	font-weight: 700;
+	line-height: 45px;
+	text-align: left;
+	width: 400px;
+/*	padding-left: 50px;*/
+/*	background-color: blue;*/
+}
+#section0 .menu .fields li a{
+
+	display: inline-block;
+	width: 320px;
+	height: 47px;
+	padding: 13px 0 12px;
+	padding-left: 120px;
+/*	background-color: green;*/
+		}
+		
+		#section0 .menu .fields li a:hover{
+	background-image:url(source/img/UI/hover_menu.png);
+			background-size:cover;
+	
+	
+}
+		
+		.image_pop{
+			position: absolute;
+	right: 300px;
+			float: right;
+	width: 500px;
+/*			height: 500px;*/
+			margin-top: 00px;
+			margin-left: 50px;
+			margin-right: 50px;
+/*	background-color: blueviolet;*/
+			
+		}
+		
+		.image_pop img{
+			float: right;
+	width: 400px;
+			height: 400px;
+			margin-left: 100px;
+/*	background-color: blueviolet;*/
+		}
+		
+		#sec01{
+			position: absolute;
+			top: 0;
+			left: 0;
+/*			width: 300px;*/
+			height: auto;
+			display: none;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<header>
+			<!--			<h1 class="logo"><a href="#home"><span>Logo</span></a></h1>-->
+			<nav>
+				<ul class="1ul">
+					<li><a href="./index.html">
+<!--					<img class="logo_img" src="./source/img/UI/logo_01.png" alt="">-->
+					<img class="logo_img02 left_02" src="./source/img/UI/logo_one.png" alt="">
+					<img class="logo_img02 right_02" src="./source/img/UI/logo_one.png" alt="">
+					</a></li>
+					<li><a href="./portfolio.html"><span>PORTFOLIO</span></a></li>
+				</ul>
+				<ul class="2ul">
+					<li><a href="index.html#about"><span>ABOUT</span></a></li>
+					<li><a href="index.html#contact"><span>CONTACT</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<div id="section0" class="section block">
+				<div class="section-area">
+					<div class="area-flex">
+						<div class="menu">
+							<ul class="fields">
+								<li class="selected 01"><a href="./design_list01.html">Design</a></li>
+								<li class="02"><a href="./design_list02.html">3D</a></li>
+								<li class="03"><a href="./design_list03.html">New Media</a></li>
+								<li class="04"><a href="./design_list04.html">Unity</a></li>
+								<li class="05"><a href="./design_list05.html">Web</a></li>
+							</ul>
+						</div>
+						<div class="image_pop">
+							<img src="./source/img/UI/square.png" alt="">
+							<div id="sec01"><img src="./source/img/portfolio/design/01/01_%EC%8B%AC%EC%9E%AC%ED%98%95_%EC%9D%B8%ED%8F%AC%EA%B7%B8%EB%9E%98%ED%94%BD.jpg" alt=""></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+	</div>
+
+
+	<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+	<script src="./js/libs/jquery/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="scripts/anime.min.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+	<script>
+		var numberOfEls = 150;
+		//파티클 양 조절
+		var duration = 4000;
+		// 퍼지기까지 정해둔 시간
+		var midScreenX = window.innerWidth / 2;
+		//midscreen x = 윈도우 콘텐츠 창의 너비의 반
+		var midScreenY = window.innerHeight / 2;
+		//midscreen y = 윈도우 콘텐츠 창의 높이의 반
+		var radius = Math.sqrt(midScreenX * midScreenX + midScreenY * midScreenY);
+		// 반지름 = (윈도우 너비 반의 제곱 + 윈도우 높이 반의 제곱) 의 루트값.
+		var fragment = document.createDocumentFragment();
+		// fragment 변수는 노드를 담은 임시 개체이다 ?
+		for (var i = 0; i < numberOfEls; i++) {
+			//역시 numberOfEls는 파티클 개수!
+			var hue = Math.round(360 / numberOfEls * i);
+			//요소의 색상은 (360/파티클 개수로 정한 수 * 현재 파티클의 순번 )의 값의 소수점 이하를 반올림한 것.
+			var angle = Math.random() * Math.PI * 8;
+			//요소의 각도는 0 이상 1 미만 사이의 랜덤값 * 3.14 * 8 ;
+			var el = document.createElement('div');
+			//변수 el 은 문서에 div 요소를 새로 만들어 값을 가지고
+			el.classList.add('particule');
+			//div의 class에 particule 도 넣는다.
+			el.style.backgroundColor = 'hsl(' + hue + ', 0%, 60%)';
+			//div 요소의 배경 색은 hsl(색상=hue, 채도=35%, 명도=60%)
+			el.style.width = '1px';
+			//div 요소의 너비는 1px.
+			el.style.height = '1px';
+			//div 요소의 높이는 1px.
+			anime({
+				targets: el,
+				//anime 코드의 타겟은 el.
+				width: ['2px', '4px'],
+				//너비 재설정 -> 시작 ~ 끝
+				height: ['2px', '4px'],
+				//높이 재설정 -> 시작 ~ 끝
+				left: [midScreenX + 'px', Math.cos(angle) * radius + midScreenX + 'px'],
+				//위치 조절, 왼쪽에서 얼마
+				top: [midScreenY + 'px', Math.sin(angle) * radius + midScreenY + 'px'],
+				//위치 조절, 위에서 얼마
+				delay: (duration / numberOfEls) * (i + 30),
+				//지연되는 시간은 (4000/100) * 순번+30
+				duration: duration / 2,
+				//애니메이션이 한 번 도는 시간은 4000/2 = 2000
+				easing: 'easeInOutBack',
+				//https://easings.net/ easing 속성이 많다.
+				loop: true
+				//반복 실행할거다.
+			});
+			fragment.appendChild(el);
+			//변수에 el 아이들을 받아줘
+		}
+		document.body.appendChild(fragment);
+		//문서의 body에 아이들 받아줘 ...
+	</script>
+</body>
+
+</html>

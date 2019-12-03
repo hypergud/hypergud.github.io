@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../css/try02/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<style type="text/css">
+		/*		ff5394*/
+		/*		53cae5*/
+		@font-face {
+			font-family: 'DOSGothic';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body {
+			font-family: 'Gothic A1';
+			overflow: hidden;
+		}
+
+
+		#wrap {
+			overflow: hidden
+		}
+
+		a {
+			color: #111;
+			text-decoration: none
+		}
+
+		header {
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding-top: 35px;
+			padding-left: 40px;
+		}
+
+		header h1.logo {
+			font-size: 18px;
+			font-weight: 900;
+			/*			font-family: 'DOSGothic';*/
+		}
+
+		header nav ul {
+			position: absolute;
+			top: 690px;
+			left: -155px;
+			-ms-transform: rotate(-90deg);
+			-webkit-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+			font-size: 15px;
+			font-weight: 500;
+			letter-spacing: 0px;
+		}
+
+
+		header nav ul li {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		header nav ul li:hover {}
+
+		header nav ul li+li {
+			margin-left: 90px
+		}
+
+.flex { display: -webkit-flex; display: flex; -webkit-flex-direction: row;  flex-direction: row; -webkit-justify-content: flex-start; justify-content: flex-start;}
+.slider-wrapper{position: relative;top: 15vh;}
+.slider-wrapper {margin-top: 0vw;  margin-left: 15vw;height: 45vw;}
+.slide-image {}
+.slide-image  .box {width: 12vw; height: 15vw; cursor: pointer;position: relative;top: 7vh; left: 29.5vw;z-index: 1;}
+.front{position: relative;}
+.slide-image .box a{
+	/* background-color: black;width: 10vw;height: 10vw;z-index: 30; */
+}
+.back{position: relative;left:20vw;z-index: 20;}
+.slide-content {width:20vw;height: 70vh; color: #000; padding:3vw 18vw 3vw 9vw;background-color: rgba(255, 192, 203, 0);margin-right
+:30vw}
+.slide-title {width:20vw;position:relative;top:35vh;left:7.2vw;font-size: 28px; font-weight: 700; letter-spacing: 0.1vw; line-height: 1.5vw; padding-bottom: 1.8vw;}
+.slide-text {position:relative;top:33vh;left:10.5vw;font-size: 0.80vw; line-height: 1.2vw; opacity: 0.8; padding-bottom: 4vw;}
+.slide-bullet {background-color: #0b8bcc;position: relative;}
+.slide-nav {margin-left: 64vw; margin-top: -5.5vw;}
+
+/* div.overlay-blue {width: 100%; height: 100%; position: absolute; top: 0; transition: 0.5s ease all;} */
+/* div.overlay-blue:hover {background-color: rgba(13, 27, 43, 0.5);} */
+
+.arrows{width: 3.5vw; margin-top: -5.8vw; margin-left: 72vw; position: relative;}
+.arrow {display: inline-block; position: absolute; width: 1.2vw; height: 1.2vw; 
+	background: transparent; text-indent: -9999px; 
+	/* border-top: 0.15vw solid rgb(0, 0, 0); border-left: 0.15vw solid #000;  */
+	border-top: 0.8vw solid rgb(0, 0, 0); border-left: 0.8vw solid #000; 
+	transition: all .1s ease-in-out; text-decoration: none; color: transparent;
+}
+.arrow:hover {border-color:#53cae5;
+}
+.arrow:before {display: block; height: 200%; width: 200%; margin-left: -50%; margin-top: -50%; content: ""; transform: rotate(45deg);}
+.arrow.prev {transform: rotate(-45deg); left: -51vw;position: relative; top: -37vh;}
+.arrow.next {transform: rotate(135deg); right: -4vw;position: relative; top: -41.3vh;}
+
+
+.message{
+	text-align: right;
+	position: relative;
+	/* top: 1vh; */
+	right: 4vw;
+	line-height: 26px;
+	font-size: 15px;
+	font-family: 'DOSGothic';
+	font-weight: 400;
+}
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<header>
+			<h1 class="logo">
+				<a href="/try02/index2.html">
+					<!--					<span>비일상컬렉션</span>-->
+					<span>vol.1</span>
+				</a>
+			</h1>
+			<nav>
+				<ul>
+					<li><a href="./detail.html"><span>비일상</span></a></li>
+					<li>
+						<a href="./list.html"><span>요약된 비일상</span></a></li>
+					<li>
+						<a href="./collection.html"><span>이전의 비일상</span></a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<div class="slider">
+						<div class="slider-wrapper flex">	
+							<div class="slide flex">
+									<div class="slide-image image-area">
+											<a href="./list.html"><div class="box red-box front"></div></a>
+											<!-- <div class="box blue-box back"><span>&nbsp;</span></div> -->
+										</div>
+								<div class="slide-content">
+									<div class="title slide-title">첫번째 비일상 컬렉션</div>
+									<div class="desc slide-text">2019 / 10.24 ~ 12.31</div>
+								</div>	
+							</div>
+								<div class="slide flex">
+										<div class="slide-image image-area">
+												<div class="box black-box"></div>
+											</div><div class="slide-content">
+									<div class="title slide-title">두번째 비일상 컬렉션</div>
+									<div class="desc slide-text">**** / **.** ~ **.**</div>
+									
+								</div>	
+							</div>
+						</div>
+						<div class="arrows">
+						<a href="#" title="Previous" class="arrow slider-link prev"></a>
+						<a href="#" title="Next" class="arrow slider-link next"></a>
+						</div>
+						</div>
+
+						<div class="message">
+							<p class="count">비일상 컬렉션 개수 : n</p>
+							<p class="mes">이외에 열람할 수 있는 비일상 컬렉션이 없습니다.</p>
+						</div>
+
+
+
+	</div>
+	<script src="../js/libs/jquery/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script src="../js/libs/jquery/jquery-2.2.4.min.js"></script>
+	<script src="../js/libs/TweenMax.min.js"></script>
+	<script src="../js/try02/script.js" type="text/javascript"></script>
+	<script src="../js/script2.js" type="text/javascript"></script>
+</body>
+</html>

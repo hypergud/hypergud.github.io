@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="../css/reset.css"/>
+	<!-- <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" /> -->
+	<style type="text/css">
+		@font-face {
+			font-family: 'DOSGothic';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body {
+			font-family: 'Gothic A1';
+			overflow: hidden;
+		}
+
+		* {
+			margin: 0;
+			padding: 0
+		}
+		
+		
+		#wrap{
+			overflow: hidden
+		}
+
+		a {
+			color: #111;
+			text-decoration: none
+		}
+
+		header {
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding-top: 35px;
+			padding-left: 40px;
+		}
+
+		header h2.logo {
+			font-size: 20px;
+			font-weight: 800;
+						font-family: 'DOSGothic';
+		}
+
+		header nav ul {
+			position: absolute;
+			top: 690px;
+			left: -155px;
+			-ms-transform: rotate(-90deg);
+			-webkit-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+			font-size: 15px;
+			font-weight: 500;
+			letter-spacing: 0px;
+		}
+
+
+		header nav ul li {
+			display: inline-block;
+			vertical-align: top;
+			padding-bottom: 3px;
+			box-sizing: border-box;
+		}
+
+		header nav ul li:hover{
+			font-style: italic;
+		}
+
+		header nav ul li:hover a.red{
+			color: #ff5394;
+		}
+
+		header nav ul li:hover a.blue{
+			/* color: #53cae5; */
+		}
+		
+
+		header nav ul li+li {
+			margin-left: 90px
+		}
+
+		/* vw vh - 브라우저 사이즈의 width, height - view width, view height 의 비율 */
+		/* main{padding-top:80px} */
+		.section {
+/*			overflow: hidden;*/
+			display: inline-block;
+			position: relative;
+			left: 200px;
+			width: 90%;
+			height: 100vh;
+			min-height: 800px;
+			color: #000
+		}
+
+		/* .section{display:block;width:100%;height:calc(100vh - 80px);min-height:800px;color:#fff} */
+		.section .section-area {
+			width: 100%;
+			height: calc(100vh - 80px);
+			min-height: 800px;
+			position: relative;
+			top: 0;
+			right: 0;
+			margin-right: auto;
+			margin-left: auto;
+			padding-right: 40px;
+			padding-left: 40px;
+			box-sizing: border-box
+		}
+
+		/*		 .section:nth-child(1) .section-area{padding-top:80px} */
+		/* .section:nth-child(1){height:calc(100vh - 80px)} */
+		.section .section-area .area-flex {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			/*						align-items: center*/
+		}
+
+		.section .section-area .area-flex b {
+			font-size: 100px;
+			font-weight: 700;
+			line-height: 120px;
+		}
+
+		#section-1 {}
+
+		#section-1 h1.main_title {
+			/* font-family: 'gothic_a1black'; */
+			position: absolute;
+			top: 645px;
+			right: 50px;
+			text-align: right;
+			width: 94%;
+			height: 100%;
+			font-size: 210px;
+			/*			font-size: 200px;*/
+			font-weight: 900;
+			line-height: 330px;
+			color: #ffffff;
+/*			color: white;*/
+/*			text-shadow: 1px 1px 2px #111;*/
+			/*마우스 휠 따라서 텍스트 쉐도우 방향 바뀌게 할 수 있을까?*/
+			text-shadow: 0px 5px 30px #e2e2e2;
+		}
+
+		#section-1 b.main_questionmark {
+			width: 5.5%;
+			height: 10%;
+			position: absolute;
+			top: 350px;
+			right: 90px;
+			text-align: right;
+			font-size: 240px;
+			font-weight: 900;
+			color: #111;
+		}
+
+		#section-1 b.main_questionmark:hover {
+			color: #ff5394;
+
+		}
+
+		#section-1 p.main_term {
+			width: 100%;
+			position: absolute;
+			top: 635px;
+			right: 55px;
+			text-align: right;
+			font-size: 15px;
+			font-weight: 400;
+			letter-spacing: 15px;
+			color: #666;
+		}
+
+		#section-1 p.main_story {
+			position: absolute;
+			height: 30px;
+			top: 50px;
+			right: 60px;
+			text-align: right;
+			font-size: 12.5px;
+/*			font-size: 12px;*/
+			font-weight: 400;
+			letter-spacing: 0.5px;
+			line-height: 14px;
+			color: black;
+/*			color: red;*/
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<header>
+			<h2 class="logo">
+				<a href="#home">
+					<!--					<span>비일상컬렉션</span>-->
+					<span>vol.1</span>
+				</a>
+			</h2>
+			<nav>
+				<ul>
+					<li><a class="red" href="./detail.html"><span>비일상</span></a></li>
+					<li>
+						<a class="blue" href="./list.html"><span>요약된 비일상</span></a></li>
+					<li>
+						<a class="blue" href="./collection.html"><span>이전의 비일상</span></a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div id="section-1" class="section block">
+				<div class="section-area">
+					<div class="area-flex">
+						<h1 class="main_title">비일상 컬렉션</h1>
+<!--						<b class="main_questionmark">?</b>-->
+						<p class="main_term">2019. 10.24 ~ 2019.12.31</p>
+						<p class="main_story">비일상의 표면적인 의미는 ‘일상이 아닌 것’ 이지만 저는 다르게 풀이합니다.<br><br>일상에 이벤트가 없다는 생각때문에 삶을 잊어가는 나,<br><br>이에 지치지 않고 더욱 행복하게 살기 위해 생각하는 것들 !<br><br>이런 비일상을 발견해 다듬어 모았습니다.</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	
+	<script src="./js/libs/jquery/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script src="js/script2.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+</html>
