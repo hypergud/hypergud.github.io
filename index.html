@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>hyper-gud</title>
+<style>
+	
+	.dot-nav{
+		transform: rotate(90deg);
+		position: fixed;
+		top: 420px;
+		right: -20px;
+		display:inline-block;
+		width: auto;
+		height: auto;
+		font-size: 18px;
+/*		background-color: aqua;*/
+	}
+	.dot-nav ul li a{
+		color: rgba(153, 51, 255, 0.7);
+	}
+	
+	.dot-nav ul li a:hover, a:active{
+		color: #9933ff;
+	}
+	.dot-nav ul li+li{
+		margin-left: 15px;}
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<header>
+			<nav>
+				<ul class="1ul">
+					<li><a href="./index.html"><img class="logo_img" src="./source/img/UI/logo_01.png" alt=""></a></li>
+					<li><a href="./portfolio.html"><span>PORTFOLIO</span></a></li>
+				</ul>
+				<ul class="2ul">
+					<li><a href="index.html#about"><span>ABOUT</span></a></li>
+					<li><a href="index.html#contact"><span>CONTACT</span></a></li>
+				</ul>
+
+
+			</nav>
+			<nav class="dot-nav">
+				<ul>
+					<li><a href="#section0"><span class="selected">&#9679;</span></a></li>
+					<li><a href="#section1"><span class="selected">&#9679;</span></a></li>
+					<li><a href="#section2"><span class="selected">&#9679;</span></a></li>
+				</ul>
+			</nav>
+		</header>
+		<a class="trigger" href="#" onclick="App.start('glasses');">
+			<img class="index_button" src="./source/img/UI/button.png" onmouseover="this.src='./source/img/UI/button_onclick.png';" onmouseout="this.src='./source/img/UI/button.png';" onclick="this.src='./source/img/UI/button_wink.png';" alt="">
+		</a>
+		<main>
+			<div id=" section0" class="section block">
+				<div class="section-area">
+					<div class="area-flex">
+						<div class="main">
+							<h1 class="main_txt">hyper&nbsp;-</h1>
+							<h1 class="main_txt2">gud</h1>
+							<img class="main_w_sq" src="./source/img/UI/white_sq2.png" alt="">
+
+						</div>
+						<div class="wrapper">
+							<!-- Our Main Video Element -->
+							<video id="videoElement" height="350" width="1000" controls autoplay></video>
+
+							<br>
+							<!-- Out Canvas Element for output -->
+							<canvas id="output" height="350" width="1000"></canvas>
+
+							<div class="colours" style="display:none;">
+								<div id="red">
+									<input type="range" min=0 max=255 value=190 class="min">
+									<input type="range" min=0 max=255 value=240 class="max">
+								</div>
+								<div id="green">
+									<input type="range" min=0 max=255 value=0 class="min">
+									<input type="range" min=0 max=255 value=120 class="max">
+								</div>
+								<div id="blue">
+									<input type="range" min=0 max=255 value=90 class="min">
+									<input type="range" min=0 max=255 value=190 class="max">
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="section1" class="section block">
+				<div class="section-area" id="about">
+					<div class="area-flex">
+						<div class="textgroup1">
+							<h1>hyper&nbsp;-</h1>
+							<p>Hi, My name is Gud. <br>
+								I’m studying Design and Programming. <br>
+								And I am interested in New Media & Interaction.<br>
+								I like fun things and enjoy learning,<br>
+								My Moto is ‘hyper-’.<br>
+								Hyper-’s target is me, I will keep develop myself !
+
+							</p>
+							
+
+						</div>
+						<div class="videogroup">
+							<img src="./source/img/UI/square.png" alt="">
+							<video src="./source/video/index/gud.mp4" autoplay></video>
+						</div>
+						<div class="textgroup2">
+							<h1>gud</h1>
+							<p>안녕하세요! 거드입니다. <br>
+								디자인과 프로그래밍을 공부하고 있습니다.<br>
+								뉴미디어와 인터랙션에 관심이 많습니다.<br>
+								유쾌하고 배우는 것을 좋아하는<br>
+								저의 모토는 hyper- ,<br>
+								자신을 ‘넘어서’ 끊임없이 개발해 나가는 것입니다.
+							</p>
+
+						</div>
+						
+						<div class="objectsgroup">
+							<img class="obj_frame" src="./source/img/UI/square-small.png" alt="">
+							<img class="obj_obj" src="./source/img/UI/button_wink.png" alt="">
+						</div>
+						
+						<div class="objectsgroup2">
+							<img class="obj_frame2" src="./source/img/UI/square-small.png" alt="">
+							<img class="obj_obj2" src="./source/img/UI/button_wink.png" alt="">
+						</div>
+						
+												
+
+					</div>
+				</div>
+			</div>
+			<div id="section2" class="section block">
+				<div class="section-area" id="contact">
+					<div class="area-flex">
+						<img class="contact_frame" src="./source/img/UI/vio@3x.png" alt="">
+						<div class="contact_left">
+							<h1 class="con_name">심 재 형</h1>
+							<img src="./source/img/UI/line.png" alt="">
+							<a href="#" download><h2 class="con_download">DOWNLOAD</h2></a>
+							<h3 class="con_add">hypergud.github.io</h3>
+							<h3 class="con_add">@hypergud</h3>
+						</div>
+						<div class="contact_right">
+							<h1 class="con_name">Document</h1>
+							<img src="./source/img/UI/line.png" alt="">
+							<h3 class="con_add">전공심화 지원  - 수학계획서</h3>
+							<a href="./source/document/02_21861071_%EC%8B%AC%EC%9E%AC%ED%98%95_%EC%88%98%ED%95%99%EA%B3%84%ED%9A%8D%EC%84%9C.pdf" download><h2 class="con_download">DOWNLOAD</h2></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+
+
+	<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+	<script src="./js/libs/jquery/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<!-- <script src="scripts/cross-origin/images.conf"></script> -->
+	<script type="text/javascript" src="scripts/anime.min.js"></script>
+	<script type="text/javascript" src="scripts/ccv.js"></script>
+	<script type="text/javascript" src="scripts/face.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+	<script type="text/javascript" src="scripts/scripts.js"></script>
+	<script type="text/javascript" src="scripts/stackblur.js"></script>
+	<!-- <script type="text/java" src="scripts/1005.java"></script> -->
+	<script>
+		var numberOfEls = 150;
+		//파티클 양 조절
+		var duration = 4000;
+		// 퍼지기까지 정해둔 시간
+		var midScreenX = window.innerWidth / 2;
+		//midscreen x = 윈도우 콘텐츠 창의 너비의 반
+		var midScreenY = window.innerHeight / 2;
+		//midscreen y = 윈도우 콘텐츠 창의 높이의 반
+		var radius = Math.sqrt(midScreenX * midScreenX + midScreenY * midScreenY);
+		// 반지름 = (윈도우 너비 반의 제곱 + 윈도우 높이 반의 제곱) 의 루트값.
+		var fragment = document.createDocumentFragment();
+		// fragment 변수는 노드를 담은 임시 개체이다 ?
+		for (var i = 0; i < numberOfEls; i++) {
+			//역시 numberOfEls는 파티클 개수!
+			var hue = Math.round(360 / numberOfEls * i);
+			//요소의 색상은 (360/파티클 개수로 정한 수 * 현재 파티클의 순번 )의 값의 소수점 이하를 반올림한 것.
+			var angle = Math.random() * Math.PI * 8;
+			//요소의 각도는 0 이상 1 미만 사이의 랜덤값 * 3.14 * 8 ;
+			var el = document.createElement('div');
+			//변수 el 은 문서에 div 요소를 새로 만들어 값을 가지고
+			el.classList.add('particule');
+			//div의 class에 particule 도 넣는다.
+			el.style.backgroundColor = 'hsl(' + hue + ', 0%, 60%)';
+			//div 요소의 배경 색은 hsl(색상=hue, 채도=35%, 명도=60%)
+			el.style.width = '1px';
+			//div 요소의 너비는 1px.
+			el.style.height = '1px';
+			//div 요소의 높이는 1px.
+			anime({
+				targets: el,
+				//anime 코드의 타겟은 el.
+				width: ['2px', '4px'],
+				//너비 재설정 -> 시작 ~ 끝
+				height: ['2px', '4px'],
+				//높이 재설정 -> 시작 ~ 끝
+				left: [midScreenX + 'px', Math.cos(angle) * radius + midScreenX + 'px'],
+				//위치 조절, 왼쪽에서 얼마
+				top: [midScreenY + 'px', Math.sin(angle) * radius + midScreenY + 'px'],
+				//위치 조절, 위에서 얼마
+				delay: (duration / numberOfEls) * (i + 30),
+				//지연되는 시간은 (4000/100) * 순번+30
+				duration: duration / 2,
+				//애니메이션이 한 번 도는 시간은 4000/2 = 2000
+				easing: 'easeInOutBack',
+				//https://easings.net/ easing 속성이 많다.
+				loop: true
+				//반복 실행할거다.
+			});
+			fragment.appendChild(el);
+			//변수에 el 아이들을 받아줘
+		}
+		document.body.appendChild(fragment);
+		//문서의 body에 아이들 받아줘 ...
+
+	</script>
+</body>
+
+</html>
