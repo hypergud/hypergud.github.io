@@ -4,14 +4,6 @@
 	font-family: Gothic A1;
 }
 
-/*
-::-webkit-scrollbar{width: 10px;}
-::-webkit-scrollbar-track{background-color: black;}
-::-webkit-scrollbar-thumb{background-color: #6315b2;border-radius: 10px;}
-::-webkit-scrollbar-thumb:hover{background-color: #9933ff;}
-::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment{width: 10px;height: 10px;background-color: #9933ff;border-radius: 10px;}
-*/
-
 ::-webkit-scrollbar {
 	width: 10px;
 	display: none
@@ -21,14 +13,6 @@
 	background-color: black;
 }
 
-/*
-::-webkit-scrollbar-thumb{background-color: #6315b2;border-radius: 10px;}
-::-webkit-scrollbar-thumb:hover{background-color: #9933ff;}
-::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment{width: 10px;height: 10px;background-color: #9933ff;border-radius: 10px;}
-*/
-
-
-
 a {
 	color: #fff;
 	text-decoration: none
@@ -36,59 +20,33 @@ a {
 
 header {
 	overflow: hidden;
-	/*			display: -webkit-flex; */
-	/*			display: flex;*/
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	padding: 10px;
-	/*			background-color: violet;*/
-	/*			justify-content: space-between;*/
-	/*			align-items: center*/
 	font-size: 20px;
 	font-weight: 600;
 	letter-spacing: 0.5px;
 	z-index: 1000;
 }
 
-.banner .dot-nav {
-	position: absolute;
-	z-index: 50;
-	bottom: 20px;
-	width: 100%
+.footer{
+	position: fixed;
+	color: white;
+	color: #9933ff;
+	background-color: rgba(255, 255, 255, 0);
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0.8px;
+	top: 915px;
+	left: 870px;
+	margin: 0 auto;
+	text-align: center;
 }
 
-.banner .dot-nav ul {
-	display: block;
-	text-align: center
-}
+/* .purple{
 
-.banner .dot-nav li {
-	display: inline-block;
-	padding-right: 7px;
-	padding-left: 7px
-}
-
-.banner .dot-nav li span {
-	display: block;
-	width: 8px;
-	height: 8px;
-	background-color: #888;
-	border-radius: 50%;
-	line-height: 8px;
-	cursor: pointer;
-	user-select: none;
-	-webkit-transition: background-color 120ms ease-in-out
-}
-
-.banner .dot-nav li span:hover {
-	background-color: #666
-}
-
-.banner .dot-nav li span.selected {
-	background-color: #fff;
-	cursor: default
-}
+} */
 
 header nav,
 header nav ul {
@@ -107,8 +65,6 @@ ul {
 	list-style: none;
 }
 
-
-
 .logo_img {
 	width: 7vh;
 }
@@ -121,24 +77,26 @@ ul {
 @keyframes changecolor {
 	from {
 		color: white;
-		left: -270px;
+		margin-left: 0px;
 	}
 
 	to {
 		color: #9933ff;
-		left: -450px;
+		margin-left: -230px;
 	}
 }
 
 @keyframes changecolor2 {
 	from {
 		color: transparent;
-		left: 0px;
+		/* left: 110px; */
+		margin-left: 0;
 	}
 
 	to {
 		color: #9933ff;
-		left: 150px;
+		/* left: 160px; */
+		margin-left: 50px;
 	}
 }
 
@@ -150,11 +108,12 @@ ul {
 	/*	background-color: black;*/
 	position: absolute;
 	top: -100px;
-	left: -270px;
+	left: -250px;
 	animation-name: changecolor;
 	animation-delay: 1s;
 	animation-duration: 3s;
 	animation-fill-mode: forwards;
+/*	color: transparent*/
 }
 
 .main_txt2 {
@@ -165,25 +124,26 @@ ul {
 	/*	background-color: black;*/
 	position: absolute;
 	top: -100px;
-	left: -270px;
+	left: 110px;
 	animation-name: changecolor2;
-	animation-delay: 1s;
-	animation-duration: 3s;
+	animation-delay: 2s;
+	animation-duration: 2s;
 	animation-fill-mode: forwards;
+	color: transparent
 }
 
 @keyframes changesize {
 	from {
 		width: 800px;
 		height: 200px;
-		top: -150px;
+		top: -130px;
 		left: -400px;
 	}
 
 	to {
 		width: 1250px;
 		height: 450px;
-		top: -250px;
+		top: -230px;
 		left: -620px;
 	}
 }
@@ -199,6 +159,26 @@ ul {
 	animation-fill-mode: forwards;
 }
 
+/* index#dot-nav */
+.dot-nav{
+	transform: rotate(90deg);
+	position: fixed;
+	top: 420px;
+	right: -20px;
+	display:inline-block;
+	width: auto;
+	height: auto;
+	font-size: 17px;
+}
+.dot-nav ul li a{
+	color: rgba(153, 51, 255, 0.7);
+}
+
+.dot-nav ul li a:hover, a:active{
+	color: #9933ff;
+}
+.dot-nav ul li+li{
+	margin-left: 15px;}
 
 
 
@@ -207,13 +187,6 @@ ul {
 .about {}
 
 .contact {}
-
-/*
-
-		header nav ul li+li {
-			margin-left: 20px
-		}
-*/
 
 /* vw vh - 브라우저 사이즈의 width, height - view width, view height 의 비율 */
 /* main{padding-top:80px} */
@@ -308,14 +281,40 @@ canvas {
 	z-index: 100;
 }
 
-.trigger {}
+.trigger p{
+	position: absolute;
+	left: 46.5vw;
+	bottom: 21.2vh;
+	color: rgb(170, 170, 170);
+}
+
+@keyframes shake {
+	10%, 90% {
+	  transform: translate3d(-0.5px, 0, 0);
+	}
+	20%, 80% {
+	  transform: translate3d(1px, 0, 0);
+	}
+	30%, 50%, 70% {
+	  transform: translate3d(-1px, 0, 0);
+	}
+	40%, 60% {
+	  transform: translate3d(2px, 0, 0);
+	}
+  
+  }
 
 .index_button {
 	width: 10vh;
 	position: absolute;
 	left: 47.5vw;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 	bottom: 23vh;
 	z-index: 1000;
+	animation: shake 2s cubic-bezier(.36,.07,.19,.97) 2s none;
+  	transform: translate3d(0, 0, 0);
 }
 
 
@@ -332,19 +331,10 @@ canvas {
 .textgroup1 {
 	transform: rotate(-90deg);
 	position: relative;
-	top: -200px;
-	left: -320px;
+	top: -235px;
+	left: -318px;
 }
 
-.textgroup1 h1 {
-	font-size: 130px;
-	font-weight: 800;
-	letter-spacing: 5px;
-	color: #9933ff;
-	position: relative;
-	top: 0px;
-	left: 40px;
-}
 
 .textgroup1 p {
 	font-size: 17px;
@@ -353,8 +343,8 @@ canvas {
 	letter-spacing: 0.3px;
 	color: #d9d9d9;
 	position: relative;
-	top: 20px;
-	left: -100px;
+	top: 55px;
+	left: -110px;
 }
 
 .videogroup {
@@ -378,10 +368,18 @@ canvas {
 	background-color: white;
 }
 
+.videogroup .gudimg{
+	position: relative;
+	top: -30px;
+	left: -175px;
+	width: 340px;
+	height: 340px;
+}
+
 .textgroup2 {
 	position: relative;
-	top: 130px;
-	left: 450px;
+	top: 200px;
+	left: 550px;
 }
 
 .textgroup2 h1 {
