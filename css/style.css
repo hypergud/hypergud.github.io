@@ -182,11 +182,11 @@ ul {
 
 
 
-.portfolio {}
+/* .portfolio {}
 
 .about {}
 
-.contact {}
+.contact {} */
 
 /* vw vh - 브라우저 사이즈의 width, height - view width, view height 의 비율 */
 /* main{padding-top:80px} */
@@ -321,12 +321,12 @@ canvas {
 
 /*-------------------about----------------------*/
 
-
+/* 
 #section1 {
-/*	background-color: rgba(153, 51, 255, 0.22)*/
-	
+background-color: rgba(153, 51, 255, 0.22)
+	 
 }
-
+*/
 
 .textgroup1 {
 	transform: rotate(-90deg);
@@ -400,9 +400,9 @@ canvas {
 	left: -200px;
 }
 
-.objectgroup{
+/* .objectgroup{
 	
-}
+} */
 
 .objectsgroup .obj_frame{
 	position: absolute;
