@@ -1,0 +1,97 @@
+@font-face {font-family: 'DOSGothic';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');font-weight: normal;font-style: normal;}
+body {font-family: 'Gothic A1';}
+a {color: #111;text-decoration: none}
+header {overflow: hidden;display: flex;flex-direction: column;position: fixed;top: 0;right: 0;left: 0;width: 100%;height: 100%;padding-top: 3.6vh;padding-left: 2.1vw;z-index: 100}
+header h2.logo {font-size: 2.1vh;font-weight: 800;font-family: 'DOSGothic';}
+header nav ul {position: absolute;top: 71.2vh;left: -8.05vw;-ms-transform: rotate(-90deg);-webkit-transform: rotate(-90deg);transform: rotate(-90deg);font-size: 1.55vh;font-weight: 500;letter-spacing: 0px;z-index: 1000}
+header nav ul li {display: inline-block;vertical-align: top;padding-bottom: 0.25vh;box-sizing: border-box;}
+header nav ul li:hover{font-style: italic;}
+header nav ul li:hover a.red{color: #ff5394;}
+header nav ul li+li {margin-left: 9.3vh;}
+
+
+/*index.html*/
+.section {display: inline-block;position: relative;left: 10.44vw;width: 90vw;height: 100vh;color: #000}
+.section .section-area {position: relative;top: 0;right: 0;margin-right: auto;box-sizing: border-box}
+.section .section-area .area-flex {display: flex;flex-direction: column;width: 100%;height: 100%;justify-content: center;}
+#section-1 h1.main_title {position: absolute;top: 68vh;right: 2.5vw;text-align: right;width: 94vw;height: 100vh;font-size: 22vh;font-weight: 900;line-height: 33vh;color: #ffffff;text-shadow: 0px 5px 30px #e2e2e2;}
+#section-1 p.main_term {width: 100vw;position: absolute;top: 64vh;right: 3vw;text-align: right;font-size: 1.55vh;font-weight: 400;letter-spacing: 0.78vw;color: #666;}
+#section-1 p.main_story {position: absolute;height: 30px;height: 10vh;top: 5vh;right: 3vw;text-align: right;font-size: 1.3vh;font-weight: 400;letter-spacing: 0.04vw;line-height: 1.5vh;color: black;}
+
+
+/*collection.html*/
+.collection_body {display: flex;width: 100vw;height: 100vh;align-items: center;justify-content: center;overflow: hidden}
+#collection_wrap{overflow: hidden}
+.red-box {background-color: #ff5394;}
+.blue-box {background-color: #53cae5;}
+.black-box {background-color: #000;}
+.flex { display: -webkit-flex; display: flex; -webkit-flex-direction: row;  flex-direction: row; -webkit-justify-content: flex-start; justify-content: flex-start;}
+.slider-wrapper{position: relative;top: 14vh;}
+.slider-wrapper {margin-top: 0vw;  margin-left: 15vw;height: 45vw;}
+.slide-image  .box {width: 12vw; height: 15vw; cursor: pointer;position: relative;top: 7vh; left: 29.5vw;z-index: 1;}
+.front{position: relative}
+.back{position: relative;left:20vw;z-index: 20;}
+.slide-content {width:20vw;height: 70vh; color: #000; padding:3.5vw 18vw 3vw 9vw;background-color: rgba(255, 192, 203, 0);margin-right:30vw}
+.slide-title {width:20vw;position:relative;top:35vh;left:7.2vw;font-size: 28px; font-weight: 700; letter-spacing: 0.1vw; line-height: 1.5vw; padding-bottom: 1.8vw;}
+.slide-text {position:relative;top:33vh;left:10.5vw;font-size: 0.80vw; line-height: 1.2vw; opacity: 0.8; padding-bottom: 4vw;width: 300px}
+.slide-bullet {background-color: #0b8bcc;position: relative;}
+.slide-nav {margin-left: 64vw; margin-top: -5.5vw;}
+.arrows{width: 5vw; margin-top: -5.8vw; margin-left: 72vw; position: relative;}
+.arrow {display: inline-block; position: absolute; width: 1.8vw; height: 1.8vw; 
+	background: transparent; text-indent: -9999px;border-top: 0.8vw solid rgb(0, 0, 0); border-left: 0.8vw solid #000;transition: all .1s ease-in-out;text-decoration: none;color:transparent;}
+.arrow:hover {border-color:#53cae5;}
+.arrow:before {display: block; height: 200%; width: 200%; margin-left: -50%; margin-top: -50%; content: ""; transform: rotate(45deg);}
+.arrow.prev {transform: rotate(-45deg); left: -50.5vw;position: relative; top: -37vh;}
+.arrow.next {transform: rotate(135deg); left: 2.5vw;position: relative; top: -37vh;border-radius: 0%;width: 1.8vw;height: 1.8vw;}
+.message{text-align: right;position: relative;right: 4vw;line-height: 1.4vw;font-size: 1.55vh;font-family: 'DOSGothic';font-weight: 400;}
+
+
+/*list.html*/
+.list_section {display: inline-block;position: relative;left: 13vw;width: 90vw;height: 100vh;color: #000}
+.list_section .list_section-area {width: 92.3vw;height: 90vh;position: relative;top: 22vh;right:1vw;margin-right: auto;margin-left: auto;box-sizing: border-box}
+.list_section .list_section-area .list_area-flex {display: flex;flex-direction: column;width: 90vw;height: 100vh;padding: 4.2vh 0;}
+div.list{width: 83vw;border-bottom: 0.2vh solid black;margin: 0 0 2.6vh 0;padding: 0 0 1vh 5vh;}
+b.list_title{font-size: 8.1vh;font-weight: 800;line-height: 12.5vh;margin-right: 2.5vh;}
+b.list_term{font-size: 2vh;font-weight: 600;line-height: 2vh;letter-spacing: 0.05vh;color: #888}
+b.list_plus{font-size: 11vh;font-weight: 800;line-height: 13vh;text-align: right;position: absolute;right: 11vw;z-index: 100}
+a b.list_plus:nth-child(1){color: black;display: inline-block;}
+a b.list_plus:nth-child(2){color: #ff5394;display: none;font-size: 9.5vh;font-weight: 900}
+a:hover b.list_plus:nth-child(1){display: none;}
+a:hover b.list_plus:nth-child(2){display: inline-block;}
+
+
+/*detail.html*/
+
+.detail_body{box-sizing: border-box}
+#detail_wrap{overflow: hidden;}
+#detail_slider{width: 100vw;height: 100vh;
+	background-color: rgba(221, 221, 221, 0.185);
+	position: relative;box-sizing: border-box;}
+.track{position: relative;width: 100%;height: 100%;}
+.detail_slider-content{position: absolute;top: 15vh;left: 34vw;height: 60vh;width: 32vw;font-size: 2.5vh;font-weight: bold;background-position: center center;background-size: cover;background-repeat: no-repeat;opacity: 0;transition: 0.3s cubic-bezier(0.8, 0.65, 0, 0.36);background-color: #fff;z-index: 0;z-index: 100;border: 0.16vh solid black;padding: 1vw 2.5vw;}
+.detail_slider-content01{position: relative;left: 18.1vw;}
+.detail_slider-content02{position: relative;top: -45vh;left: 50vw;height: 60vh;width: 32vw;font-size: 2.5vh;font-weight: bold;background-position: center center;background-size: cover;background-repeat: no-repeat;opacity: 0;transition: 0.3s cubic-bezier(0.8, 0.65, 0, 0.36);z-index: 10000;border: 0.16vh solid black;padding: 1vw 2.5vw;}
+.detail_slider-content.active{opacity: 1}
+.content_header01 li{position: relative;transform: translateY(-16vw); }
+.detail_slider-content01.active ~ .detail_slider-content02{opacity: 1}
+.detail03{transform: translateX(-15vw)}
+.detail04{position: relative;top: -105vh;left: 50.9vw;height: 60vh;width: 32vw;font-size: 2.5vh;font-weight: bold;background-position: center center;background-size: cover;background-repeat: no-repeat;opacity: 0;transition: 0.3s cubic-bezier(0.8, 0.65, 0, 0.36);z-index: 10000;border: 0.16vh solid black;padding: 1vw 2.5vw;line-height: 10vh;}
+.content_header02 li{position: relative;transform: translateY(-15vw); }
+.detail03.active ~ .detail04{opacity: 1}
+.track .dots{padding: 0.5vw;position: absolute;top: 3vh;left: 91vw;transform: translateX(-50%);z-index: 200;}
+.dot{display: inline-block;width: 0.62vw;height: 0.62vw;border-radius: 50%;border: 0.1vh solid #000;margin: 0.42vw;padding: 0.2vh;transition: 0.3s cubic-bezier(0.8, 0.65, 0, 0.36);cursor: pointer;position: relative;left: 2.5vw}
+.dot:hover{background-color: rgba(27, 149, 224, 0.25)}
+.dot.active{border: 0.1vh solid rgb(0, 0, 0);background-color: rgb(0, 0, 0);transform: scale(1.1)}
+.track .prev, .next{position: absolute;top: 90vh;transform: translateY(-50%);width: 1.6vw;height:3vh;border-radius: 50%;background-color: rgba(255, 255, 255, 0.6);cursor: pointer;z-index: 101;padding: 0vw;}
+.prev{position: relative;left: 45vw;z-index: 200}
+.next{position: absolute;top: 91.4vh;left: 55vw;z-index: 200}
+.detail_slide-date{font-size: 2vh;font-weight: 600; text-align: right;position: relative;top: 0.3vh;left: 0.5vw;}
+.detail_slide-title{font-size: 5.5vh;font-weight: 800;text-align: center;margin-top: 7.5vh;
+	line-height: 5.5vh;
+}
+.h1_title{
+/*	line-height: 5.5vh;*/
+}
+.text{border-top: 0.16vh solid black;font-size: 1.85vh;font-weight: 550;line-height: 4vh;z-index: 0;padding-top: 2.8vh;margin-top: 3vh;}
+.content_header{position: absolute;display: flex;-ms-transform: rotate(90deg);-webkit-transform: rotate(90deg);transform: rotate(90deg);font-size: 1.6vh;font-weight: 500;letter-spacing: 0px;left: -44vw;top: 69.2vh;}
+.content_header li{margin-right: 8vw;cursor: pointer;position: relative;top: -94.9vw;}

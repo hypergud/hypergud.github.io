@@ -45,8 +45,27 @@
         TweenLite.fromTo(slide_more, 1, fromProperties, toProperties);
   
       });
+		
+		
+//		--------시스템메세지-------
+		
+		
+		var slide = $('.slide');
+		var countslide = slide.length;
+		// console.log(countslide);
+		
+		var countp = $('.count');
+		countp.html("<span>비일상 컬렉션 개수는 : " + countslide + "</span>");
+		var mes = $('.mes');
+		if(countslide == 1){
+			mes.html("<span>이외에 열람할 수 있는 비일상 컬렉션이 없습니다.</span>");
+		}else{
+			mes.html("<span>이외에 열람할 수 있는 비일상 컬렉션이 " + (countslide -1) + "개 있습니다.</span>");
+		}
+		
+		
+		
             
     });
   })(jQuery);
   
-  $('.overlay').addClass('overlay-blue');

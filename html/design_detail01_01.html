@@ -16,19 +16,7 @@
 }
 
 
-.footer{
-	position: fixed;
-	color: white;
-	color: #9933ff;
-	background-color: rgba(255, 255, 255, 0);
-	font-size: 12px;
-	font-weight: 400;
-	letter-spacing: 0.8px;
-	top: 915px;
-	left: 870px;
-	margin: 0 auto;
-	text-align: center;
-}
+
 
 
 ::-webkit-scrollbar {
@@ -207,7 +195,7 @@ body {
 		#section1 .menu2 .fields li a{
 
 display: inline-block;
-width: 320px;
+width: 280px;
 height: 35px;
 padding: 10px 0 2px;
 padding-left:80px;
@@ -376,6 +364,37 @@ top: 140px;
 		.content_move{
 			transform: translate(160px);
 		}
+
+
+		.lined:hover{
+	position: relative;
+	border-bottom: 2px solid #9933ff;
+	padding-bottom: 2px;
+	animation-name: drawline;
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes drawline{
+	from{width: 0;border-color: transparent;}
+	to{width: 1px;border-color: #9933ff;}
+}
+
+.footer{
+	position: fixed;
+	color: white;
+	color: #9933ff;
+	background-color: rgba(255, 255, 255, 0);
+	font-size: 12.5px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	top: 917px;
+	left: 870px;
+	margin: 0 auto;
+	text-align: center;
+	cursor: default;
+}
 	</style>
 </head>
 
@@ -388,9 +407,9 @@ top: 140px;
 						<img class="logo_img02 left_02" src="../source/img/UI/logo_one.png" alt="">
 						<img class="logo_img02 right_02" src="../source/img/UI/logo_one.png" alt="">
 					</a>
-					<a class="nav_pf" href="./portfolio.html"><span>PORTFOLIO</span></a>
-					<a class="nav_ab" href="../index.html#about"><span>ABOUT</span></a>
-					<a class="nav_co" href="../index.html#contact"><span>CONTACT</span></a>
+					<a class="nav_pf" href="./portfolio.html"><span class="lined">PORTFOLIO</span></a>
+					<a class="nav_ab" href="../index.html#about"><span class="lined">ABOUT</span></a>
+					<a class="nav_co" href="../index.html#contact"><span class="lined">CONTACT</span></a>
 			</nav>
 			<h5 class="footer">@hypergud All rights reserved.</h5>
 		</header>

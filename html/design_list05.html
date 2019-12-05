@@ -169,7 +169,7 @@ body {
 #section0 .menu .fields li a{
 
 	display: inline-block;
-	width: 320px;
+	width: 200px;
 	height: 42px;
 	padding: 10px 0 2px;
 	padding-left:15px;
@@ -354,6 +354,35 @@ body {
 		.obj_frame2{position: absolute;top: 0px;left: 0px;z-index: 2;width: 200px;}
 		.obj_obj2{position: relative;top: 34px;left: 20px;z-index: 1;width: 160px;}
 		
+		.lined:hover{
+	position: relative;
+	border-bottom: 2px solid #9933ff;
+	padding-bottom: 2px;
+	animation-name: drawline;
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes drawline{
+	from{width: 0;border-color: transparent;}
+	to{width: 1px;border-color: #9933ff;}
+}
+
+.footer{
+	position: fixed;
+	color: white;
+	color: #9933ff;
+	background-color: rgba(255, 255, 255, 0);
+	font-size: 12.5px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	top: 917px;
+	left: 870px;
+	margin: 0 auto;
+	text-align: center;
+	cursor: default;
+}
 	</style>
 </head>
 
@@ -367,9 +396,9 @@ body {
 						<img class="logo_img02 left_02" src="../source/img/UI/logo_one.png" alt="">
 						<img class="logo_img02 right_02" src="../source/img/UI/logo_one.png" alt="">
 					</a>
-					<a class="nav_pf" href="./portfolio.html"><span>PORTFOLIO</span></a>
-					<a class="nav_ab" href="../index.html#about"><span>ABOUT</span></a>
-					<a class="nav_co" href="../index.html#contact"><span>CONTACT</span></a>
+					<a class="nav_pf" href="./portfolio.html"><span class="lined">PORTFOLIO</span></a>
+					<a class="nav_ab" href="../index.html#about"><span class="lined">ABOUT</span></a>
+					<a class="nav_co" href="../index.html#contact"><span class="lined">CONTACT</span></a>
 			</nav>
 
 			<h5 class="footer">@hypergud All rights reserved.</h5>
@@ -405,7 +434,7 @@ body {
 									</article>
 									<img src="../source/img/UI/solid_line.png" alt="">
 								</div>
-								<div style="border-bottom: none;"><label class="last" for="ac-2">No Other Projects</label>
+								<div style="border-bottom: none;"><label style="cursor: not-allowed;" class="last" for="ac-2">No Other Projects</label>
 								</div>
 							</section>
 						</div>
@@ -439,7 +468,15 @@ body {
 
 	<script src="../js/libs/jquery/jquery-3.4.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="../scripts/script.js"></script>
-	
+	<script src="../js/libs/plax.js"  type="text/javascript"></script>
+	<script>
+	$(document).ready(function () {
+  $('.open02').plaxify({"xRange":40,"yRange":40});
+//   $('.obj_1').plaxify({"xRange":-20,"yRange":-20});
+//   $('.obj_2').plaxify({"xRange":50,"yRange":100,"invert":true});
+  $.plax.enable()
+})
+</script>
 </body>
 
 </html>

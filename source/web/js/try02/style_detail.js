@@ -45,8 +45,66 @@
       TweenLite.fromTo(slide_more, 1, fromProperties, toProperties);
 
     });
+    
+//		버튼들
+		
+		var bt1color = $('.button01_color');
+		var bt1visual = $('.button01_visual');
+		var bt2color = $('.button02_color');
+		var bt2visual = $('.button02_visual');
+		var bt3color = $('.button03_color');
+		var bt3visual = $('.button03_visual');
+		var bt4color = $('.button04_color');
+		var bt4visual = $('.button04_visual');
+		var bt5color = $('.button05_color');
+		var bt5visual = $('.button05_visual');
+
+//		요소들
+
+		var body = $('body');
+		
+	bt1color.on("click", function(e){
+		e.preventDefault();
+		console.log("bt1_c:clicked");
+	});
+		
+	bt1visual.on('click', function(){
+		
+	});		
+		
+	bt2color.on('click', function(){
+		
+	});
+		
+	bt2visual.on('click', function(){
+		
+	});
+		
+	bt3color.on('click', function(){
+		
+	});
+		
+	bt3visual.on('click', function(){
+		
+	});
+		
+	bt4color.on('click', function(){
+		
+	});
+		
+	bt4visual.on('click', function(){
+		
+	});
+		
+	bt5color.on('click', function(){
+		
+	});
+		
+	bt5visual.on('click', function(){
+		
+	});
           
   });
 })(jQuery);
 
-$('.overlay').addClass('overlay-blue');
+// $('.overlay').addClass('overlay-blue');

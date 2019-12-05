@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gsap</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #wrap{margin:100px;display:-webkit-flex;display:flex;flex-wrap: wrap;}
+    .box{float:left;width: 100px;height: 100px;background-color: black;color: white;
+    font-size: 20px;font-weight: 700;line-height: 100px;text-align: center;}
+    .box + .box{margin-left: 20px;}
+        </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box-1" class="box">1</div>
+        <div id="box-2" class="box">2</div>
+        <div id="box-3" class="box">3</div>
+        <div id="box-4" class="box">4</div>
+        <div id="box-5" class="box">5</div>
+    </div>
+
+
+    <script src="../js/libs/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../js/libs/gsap/gsap.min.js"></script>
+    <script src="../js/try02/script_try.js"></script>
+</body>
+</html>

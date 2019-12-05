@@ -45,40 +45,40 @@ var App = {
 
 		}
 
-		// Blur!
+		// // Blur!
 
-		else if (effect === 'blur') {
-			stackBlurCanvasRGBA('output',0,0,1000,500,20);
-		}
+		// else if (effect === 'blur') {
+		// 	stackBlurCanvasRGBA('output',0,0,1000,500,20);
+		// }
 
-		// Green Screen
+		// // Green Screen
 
-		else if (effect === 'greenscreen') {
+		// else if (effect === 'greenscreen') {
 				
-					/* Selectors */
-					var rmin = $('#red input.min').val();
-					var gmin = $('#green input.min').val();
-					var bmin = $('#blue input.min').val();
-					var rmax = $('#red input.max').val();
-					var gmax = $('#green input.max').val();
-					var bmax = $('#blue input.max').val();
+		// 			/* Selectors */
+		// 			var rmin = $('#red input.min').val();
+		// 			var gmin = $('#green input.min').val();
+		// 			var bmin = $('#blue input.min').val();
+		// 			var rmax = $('#red input.max').val();
+		// 			var gmax = $('#green input.max').val();
+		// 			var bmax = $('#blue input.max').val();
 
-					// console.log(rmin,gmin,bmin,rmax,gmax,bmax);
+		// 			// console.log(rmin,gmin,bmin,rmax,gmax,bmax);
 					
-					for (i = 0; i < App.pixels.data.length; i=i+4) {
-									red = App.pixels.data[i + 0];
-									green = App.pixels.data[i + 1];
-									blue = App.pixels.data[i + 2];
-									alpha = App.pixels.data[i + 3];
+		// 			for (i = 0; i < App.pixels.data.length; i=i+4) {
+		// 							red = App.pixels.data[i + 0];
+		// 							green = App.pixels.data[i + 1];
+		// 							blue = App.pixels.data[i + 2];
+		// 							alpha = App.pixels.data[i + 3];
 
-									if (red >= rmin && green >= gmin && blue >= bmin && red <= rmax && green <= gmax && blue <= bmax ) {
-										App.pixels.data[i + 3] = 0;
-									}
-					}
+		// 							if (red >= rmin && green >= gmin && blue >= bmin && red <= rmax && green <= gmax && blue <= bmax ) {
+		// 								App.pixels.data[i + 3] = 0;
+		// 							}
+		// 			}
 
-					ctx.putImageData(App.pixels,0,0);
+		// 			ctx.putImageData(App.pixels,0,0);
 
-		}
+		// }
 		else if(effect === 'glasses') {
 			var comp = ccv.detect_objects({ "canvas" : (App.canvas),
 											"cascade" : cascade,
@@ -168,3 +168,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+var btmain = $('.trigger');
+// btmain.on('click', function(e){
+// 	e.preventDefault();
+// 	App.start('glasses');
+	
+// });
+
+btmain.on('dblclick', function(e){
+		e.preventDefault();
+		if(video = true){
+			App.video.src = null;
+			video = false;
+			videoElement.srcObject = null;
+			comp = null;
+			ctx = null;
+			App.canvas = null;
+			document.addEventListener("DOMContentLoaded", function() {
+				// console.log('ready!');
+				App.init();
+			}, false);
+			App.glasses = null;
+			ctx.putImageData(null);
+		}
+		
+	});

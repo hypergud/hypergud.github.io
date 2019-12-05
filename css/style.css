@@ -35,13 +35,14 @@ header {
 	color: white;
 	color: #9933ff;
 	background-color: rgba(255, 255, 255, 0);
-	font-size: 12px;
+	font-size: 12.5px;
 	font-weight: 400;
-	letter-spacing: 0.8px;
-	top: 915px;
+	letter-spacing: 1px;
+	top: 917px;
 	left: 870px;
 	margin: 0 auto;
 	text-align: center;
+	cursor: default;
 }
 
 /* .purple{
@@ -67,6 +68,10 @@ ul {
 
 .logo_img {
 	width: 7vh;
+}
+
+.logo_img:hover{
+	animation: shake 1.5s cubic-bezier(.36,.07,.19,.97) 0s forwards;
 }
 
 .main {
@@ -276,7 +281,7 @@ canvas {
 	-moz-transform: rotateY(180deg);
 	/* Firefox */
 	position: absolute;
-	top: 280px;
+	top: 290px;
 	left: 460px;
 	z-index: 100;
 }
@@ -337,7 +342,7 @@ background-color: rgba(153, 51, 255, 0.22)
 
 
 .textgroup1 p {
-	font-size: 17px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 27.5px;
 	letter-spacing: 0.3px;
@@ -390,10 +395,10 @@ background-color: rgba(153, 51, 255, 0.22)
 }
 
 .textgroup2 p {
-	font-size: 17px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 27.5px;
-	letter-spacing: 0.3px;
+	letter-spacing: 0.4px;
 	color: #d9d9d9;
 	position: relative;
 	top: 30px;
@@ -467,7 +472,7 @@ background-color: rgba(153, 51, 255, 0.22)
 	margin-left: 15px;
 	padding-top: 10px;
 	color: black;
-	width: 180px;
+	width: 210px;
 	height: 45px;
 	text-align: center;
 	vertical-align: middle;
@@ -538,4 +543,19 @@ background-color: rgba(153, 51, 255, 0.22)
 	font-weight: 400;
 	letter-spacing: 0.5px;
 	color: #cccccc;
+}
+
+.lined:hover{
+	position: relative;
+	border-bottom: 2px solid #9933ff;
+	padding-bottom: 2px;
+	animation-name: drawline;
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes drawline{
+	from{width: 0;border-color: transparent;}
+	to{width: 1px;border-color: #9933ff;}
 }
