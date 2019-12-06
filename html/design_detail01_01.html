@@ -395,6 +395,20 @@ top: 140px;
 	text-align: center;
 	cursor: default;
 }
+
+.q{
+	color: #9933ffbd;
+}
+
+.a{
+	font-weight: 200;
+	color: rgb(233, 233, 233);
+}
+
+.t{
+	font-weight: 400;
+	color: rgb(247, 247, 247);
+}
 	</style>
 </head>
 
@@ -456,7 +470,7 @@ top: 140px;
                     <h1 class="title">인포그래픽_일러스트</h1>
                     <div class="view_left">
                         <img class="preview" src="../source/img/portfolio/design/01/sub/title.png" alt="">
-                        <p class="pretext">
+                        <p class="pretext t">
                             - <br>
                             자신을 설명할 수 있는 인포그래픽. <br>
                             영화속 인물의 '특징을 입는다'라는 주제로 표현했다.</p>
@@ -465,16 +479,16 @@ top: 140px;
                     <div class="view_right">
 						<ul class="right_info">
                             <li>
-                                <ul>
+                                <ul class="q">
                                     <li>Format</li>
 									<li>Project Period</li>
 									<li>Tools</li>
                                 </ul>
                             </li>
                             <li>
-                                <ul>
+                                <ul class="a">
                                     <li>Poster</li>
-									<li>2018.04.00 ~ 2018.05.00</li>
+									<li>2018.04 ~ 2018.05</li>
 									<li>- Adobe Illustrator</li>
                                  </ul>
                             </li>
@@ -488,10 +502,6 @@ top: 140px;
 					<img src="../source/img/portfolio/design/01/01_심재형_인포그래픽.jpg" alt="">
 				</div>
 			</div>
-			
-			<div class="objects">
-
-			</div>
 
 
 		</main>
@@ -499,7 +509,16 @@ top: 140px;
 
 	<script src="../js/libs/jquery/jquery-3.4.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="../scripts/script.js"></script>
-	
+	<script src="../js/libs/plax.js"  type="text/javascript"></script>
+	<script>
+	$(document).ready(function () {
+  $('.obj01').plaxify({"xRange":10,"yRange":20});
+  $('.obj02').plaxify({"xRange":-20,"yRange":10});
+  $('.obj03').plaxify({"xRange":10,"yRange":10});
+  $('.sub').plaxify({"xRange":10,"yRange":10});
+  $.plax.enable()
+})
+</script>
 </body>
 
 </html>

@@ -86,11 +86,11 @@ a:hover b.list_plus:nth-child(2){display: inline-block;}
 .prev{position: relative;left: 45vw;z-index: 200}
 .next{position: absolute;top: 91.4vh;left: 55vw;z-index: 200}
 .detail_slide-date{font-size: 2vh;font-weight: 600; text-align: right;position: relative;top: 0.3vh;left: 0.5vw;}
-.detail_slide-title{font-size: 5.5vh;font-weight: 800;text-align: center;margin-top: 7.5vh;
+.detail_slide-title{font-size: 5vh;font-weight: 800;text-align: center;margin-top: 7.5vh;
 	line-height: 5.5vh;
 }
 .h1_title{
-/*	line-height: 5.5vh;*/
+	line-height: 5.5vh;
 }
 .text{border-top: 0.16vh solid black;font-size: 1.85vh;font-weight: 550;line-height: 4vh;z-index: 0;padding-top: 2.8vh;margin-top: 3vh;}
 .content_header{position: absolute;display: flex;-ms-transform: rotate(90deg);-webkit-transform: rotate(90deg);transform: rotate(90deg);font-size: 1.6vh;font-weight: 500;letter-spacing: 0px;left: -44vw;top: 69.2vh;}
