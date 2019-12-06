@@ -32,7 +32,10 @@ header nav ul li+li {margin-left: 9.3vh;}
 .front{position: relative}
 .back{position: relative;left:20vw;z-index: 20;}
 .slide-content {width:20vw;height: 70vh; color: #000; padding:3.5vw 18vw 3vw 9vw;background-color: rgba(255, 192, 203, 0);margin-right:30vw}
-.slide-title {width:20vw;position:relative;top:35vh;left:7.2vw;font-size: 28px; font-weight: 700; letter-spacing: 0.1vw; line-height: 1.5vw; padding-bottom: 1.8vw;}
+.slide-title {width:20vw;position:relative;top:35vh;left:7.2vw;
+	/* font-size: 28px;  */
+	font-size: 3vh;
+	font-weight: 700; letter-spacing: 0.1vw; line-height: 1.5vw; padding-bottom: 1.8vw;}
 .slide-text {position:relative;top:33vh;left:10.5vw;font-size: 0.80vw; line-height: 1.2vw; opacity: 0.8; padding-bottom: 4vw;width: 300px}
 .slide-bullet {background-color: #0b8bcc;position: relative;}
 .slide-nav {margin-left: 64vw; margin-top: -5.5vw;}
