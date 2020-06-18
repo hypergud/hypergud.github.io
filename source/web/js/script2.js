@@ -43,8 +43,8 @@
         TweenLite.fromTo(slide_title, 0.6, fromProperties, toProperties);
         TweenLite.fromTo(slide_text, 0.8, fromProperties, toProperties);
         TweenLite.fromTo(slide_more, 1, fromProperties, toProperties);
-  
-      });
+		  
+		 
 		
 		
 //		--------시스템메세지-------
@@ -63,7 +63,9 @@
 			mes.html("<span>이외에 열람할 수 있는 비일상 컬렉션이 " + (countslide -1) + "개 있습니다.</span>");
 		}
 		
-		
+
+		  
+      });
 		
             
     });

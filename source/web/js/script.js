@@ -9,9 +9,11 @@ $(document).on('mousemove', function(e) {
   var deltaY = textCenterTop - my;
   var shadowBlur = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
   h1.css({
-    "text-shadow" : deltaX / 10 + "px " + deltaY / 15 + "px " + shadowBlur / 15 +"px " + "rgba(0,0,0,.2)",
-    "-webkit-text-shadow" : deltaX / 10 + "px " + deltaY / 15 + "px " + shadowBlur / 15 +"px " + "rgba(0,0,0,.2)",
-    "-moz-text-shadow" : deltaX / 10 + "px " + deltaY / 15 + "px " + shadowBlur / 15+"px " + "rgba(0,0,0,.2)",
-    "-o-text-shadow" : deltaX / 10 + "px " + deltaY / 15 + "px " + shadowBlur / 15 +"px " + "rgba(0,0,0,.2)"
+//	  rgb(255, 83, 148)
+    "text-shadow" : deltaX / 10 + "px " + deltaY / 15 + "px " + shadowBlur / 15 +"px " + "rgba(" + deltaX/100 + "," + deltaY/100 + ", " + deltaY/100 + ", 0.9)",
+	  
+    "-webkit-text-shadow" : deltaX / 10 + "px " + deltaY / 15 + "px " + shadowBlur / 15 +"px " + "rgba(0, 0, 0, 0.73)",
+    "-moz-text-shadow" : deltaX / 10 + "px " + deltaY / 15 + "px " + shadowBlur / 15 +"px " + "rgba(0, 0, 0, 0.73)",
+    "-o-text-shadow" : deltaX / 10 + "px " + deltaY / 15 + "px " + shadowBlur / 15 +"px " + "rgba(0, 0, 0, 0.73)"
   });
 }); 

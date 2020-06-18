@@ -1,0 +1,62 @@
+/*color*/
+.bt1_c_body{background-color: #ffa3b5;}
+.bt1_c_title{color:  #ff5a7a;}
+.dot_c_1{background-color: #ff5a7a;}
+.bt2_c_body{background-color: #fffba3;}
+.bt2_c_title{color:  #f5ef63;}
+.dot_c_2{background-color: #f5ef63;}
+.bt3_c_body{background-color: #a3fffb;}
+.bt3_c_title{color:  #3bfff6;}
+.dot_c_3{background-color: #3bfff6;}
+.bt4_c_body{background-color: #465fa3;}
+.bt4_c_title{color:  #ff8b76;}
+.dot_c_4{background-color: #ff8b76;}
+.bt5_c_body{background-color: #ffd5a3;}
+.bt5_c_title{color:  #ffa336;}
+.dot_c_5{background-color:  #ffa336;}
+
+
+/*visual*/
+
+/*01*/
+.heart {
+    font-size: 50px;
+    color: #e00;
+    animation: beat .4s infinite alternate;
+	-webkit-animation: beat .4s infinite alternate;
+    -moz-animation: beat .4s infinite alternate;
+    -ms-animation: beat .4s infinite alternate;
+    -o-animation: beat .4s infinite alternate;
+    transform-origin: center;
+	position: relative;
+	top: -16vh;
+	left: -0.25vw;
+	display: none;
+}
+.heart_vis{
+	display: block;
+}
+/* Heart beat animation */
+@keyframes beat{
+    to { transform: scale(2); }
+}
+
+.shake01 {
+/*  width: 4em;*/
+/*  height: 4em;*/
+  animation: zoom-middle 2.5s infinite;
+}
+@keyframes zoom-middle {
+  0%,20%,85%,100% { transform: translate(0, 0em);color:rgba(59, 255, 246, 1);}
+  50%,70% { transform: translate(0, -0.7em);color:rgba(59, 255, 246, 0.4);}
+  60% { transform: translate(0, -0.3em);color: rgba(59, 255, 246, 0.1);}
+}
+
+.focus{
+  animation: focus-front 8s linear infinite;
+}
+@keyframes focus-front {
+  65%,75% { filter: blur(8px);background-color: black;}
+  0%,10%,55%,80%,100% { filter: blur(4px);background-color: #465fa3;}
+  20%,45% { filter: blur(0.01px)}
+}
